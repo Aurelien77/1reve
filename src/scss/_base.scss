@@ -1,0 +1,53 @@
+nav {
+  margin: 0px;
+  padding: 0px;
+   background-color: aqua;
+   justify-content: center;
+   
+  }
+  a  {
+
+    color:blue;
+  }
+  a:link {
+    color:blue;
+    text-decoration: none;
+    & a:visited {
+      text-decoration: none;
+     color: blue;
+    }
+  }
+  ul {
+    list-style-type: none;
+  }
+  
+
+  * {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }
+  
+  
+
+  
+  html {
+    background-color: black;
+    margin: 0px;
+    padding: 0px;
+
+   
+  
+  }
+  
+  body {
+
+
+    
+    width: 100%;
+  }
+  h1 {
+
+color: white;
+
+  }
