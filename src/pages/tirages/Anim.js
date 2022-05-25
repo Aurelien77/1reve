@@ -16,10 +16,10 @@ const pst = window.location.search;
 /* var array = pst.replace('%3F', ' ? ').replace('+', '').slice(21, ).split('+').join(' '); */
 
 
-var array = pst.replace('%3F', ' ? ').replace('%21', '!').replace('%2C', ',').replace('%C3%', '').replace('%27', "'").replace('%C3%AF', 'ï').replace('%C3%AE', 'î').slice("10" ).split('+').join(' '); 
+/* var array = pst.replace('%3F', ' ? ').replace('%21', '!').replace('%2C', ',').replace('%C3%', '').replace('%27', "'").replace('%C3%AF', 'ï').replace('%C3%AE', 'î').slice("10" ).split('+').join(' ');  */
 
 
-/*   var recupere = document.getElementsByName('question').value;  */
+  var array = document.getElementsByClassName('question').value; 
 /* var expressionReguliere = /[?&]?([^=]+)=([^&]*)/g; */
 
 console.log(pst);
