@@ -67,12 +67,14 @@ function Cartesanimlign() {
 
 
       <span > 
-  
-  <form action="/anim2" className="flexrow">
+      <input type="text" className="question" id="question"  name="question" />  <input type="submit" value="Envoyer le formulaire" onClick={() => {
+                history.push(`/anim2`);
+              } }/>
+  {/* <form action="/anim2" className="flexrow">
    
   
           <fieldset>
-          {/*   <legend></legend> */}
+      
         
             <input type="text" name="question"  />
         
@@ -82,7 +84,7 @@ function Cartesanimlign() {
           </fieldset>   
           <button type="submit" value="OK" id="question">OK</button>
          
-        </form> 
+        </form>  */}
         
         </span>        </div>
 

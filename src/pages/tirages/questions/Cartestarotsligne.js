@@ -72,11 +72,14 @@ function Cartestarotsligne() {
  
        <span > 
    
-   <form action="/tarots2" className="flexrow">
+<input type="text" className="question" id="question"  name="question" />  <input type="submit" value="Envoyer le formulaire" onClick={() => {
+                history.push(`/tarots2`);
+              } }/>
+ {/*   <form action="/tarots2" className="flexrow">
     
    
            <fieldset>
-           {/*   <legend></legend> */}
+        
          
              <input type="text" name="question"  />
          
@@ -86,7 +89,7 @@ function Cartestarotsligne() {
            </fieldset>   
            <button type="submit" value="OK" id="question">OK</button>
           
-         </form> 
+         </form>  */}
          
          </span>        </div>
  

@@ -69,13 +69,14 @@ let history = useHistory();
 
 {/*  <EssayForm value="question" name="question" id="question" />  */}
 <span > 
-  
-<form action="/tarots" className="flexrow">
+<input type="text" className="question" id="question"  name="question" />  <input type="submit" value="Envoyer le formulaire" onClick={() => {
+                history.push(`/tarots`);
+              } }/>
+{/* <form action="/tarots" className="flexrow">
  
 
         <fieldset>
-        {/*   <legend></legend> */}
-      
+     
           <input type="text" name="question" />
       
        
@@ -84,7 +85,7 @@ let history = useHistory();
         </fieldset>   
         <button type="submit" value="OK" id="question">OK</button>
        
-      </form> 
+      </form>  */}
       
       </span>   
 <div className="haut">
