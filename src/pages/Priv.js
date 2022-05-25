@@ -138,7 +138,7 @@ function Profile() {
                     width="100%"
                     height="200"
                     src={value.lien}
-                    frameborder="0"
+                    frameBorder="0"
                     allowfullscreen
                   ></iframe>
 

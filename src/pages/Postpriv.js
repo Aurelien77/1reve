@@ -53,7 +53,7 @@ function Postpriv() {
 
         <div className="boutonpriv">
           {" "}
-          {(authState.username === username || authState.admin === true) && (
+          {(authState.username === username || authState.prof === true) && (
             <>
                  <button className=""
                 onClick={() => {
@@ -63,6 +63,74 @@ function Postpriv() {
                 {" "}
                 Changer mon mots de passe
               </button> 
+
+
+
+              <div className="listepostsparutilisateur">
+        {listOfPosts.map((value, key) => {
+          return (
+      
+            <div key={key} className="post3">
+              <div className="title"onClick={() => {
+                  history.push(`/postsecondaire/${value.id}`);
+                }}> {value.title} </div>
+              <div
+                className="body"
+                onClick={() => {
+                  history.push(`/postsecondaire/${value.id}`);
+                }}
+              >
+                {value.postText}
+              </div>
+            <div className="iframdiv">
+                <iframe id="imglien" className="lien"
+                    loading="lazy"
+               scrolling="no"
+               frameBorder="10"
+               overflow="hidden"
+               height="100%"
+               width="100%" 
+                  src={value.lien}
+                
+                  allowfullscreen ="true"
+                ></iframe>
+              
+</div>
+         <div className="atarget">
+<a target="blank" href={value.lien}>
+                  {value.lien}
+                </a>
+             </div>
+              <div className="footer">
+                <div className="textfooter">
+            
+               {/*  Le {value.createdAt.replace('T', ' à ').slice(0, 21)} */}
+            Le {value.createdAt.replace('T', ' à ').slice(0, 21)}
+              
+                </div>
+
+              
+              </div>
+            </div>  
+          );
+        })}
+      
+      
+      
+      
+      
+      </div>
+
+
+
+
+
+
+
+
+
+
+
 
               {/*   <form
                 action={"https://reves-de-piano.herokuapp.com/upload/" + id}
@@ -95,55 +163,13 @@ function Postpriv() {
           )}
         </div>
       
-      <div className="listepostsparutilisateur">
-        {listOfPosts.map((value, key) => {
-          return (
+  
       
-            <div key={key} className="post3">
-              <div className="title"onClick={() => {
-                  history.push(`/postsecondaire/${value.id}`);
-                }}> {value.title} </div>
-              <div
-                className="body"
-                onClick={() => {
-                  history.push(`/postsecondaire/${value.id}`);
-                }}
-              >
-                {value.postText}
-              </div>
-            <div className="iframdiv">
-                <iframe id="imglien" className="lien"
-                    loading="lazy"
-               scrolling="no"
-               frameborder="10"
-               overflow="hidden"
-               height="100%"
-               width="100%" 
-                  src={value.lien}
-                
-                  allowfullscreen ="true"
-                ></iframe>
-              
-</div>
-         <div className="atarget">
-<a target="blank" href={value.lien}>
-                  {value.lien}
-                </a>
-             </div>
-              <div className="footer">
-                <div className="textfooter">
-            
-
-            Le {value.createdAt.replace('T', ' à ').slice(0, 21)}
-              
-                </div>
-
-              
-              </div>
-            </div>  
-          );
-        })}
-      </div></div>
+      
+      
+      
+      
+      </div>
   );
 }
 

@@ -1,0 +1,356 @@
+@import  "../mixin";
+@import "../variables.scss";
+
+
+
+.grid-container {
+   
+  display: grid;
+  grid-template-columns: auto  auto  auto  ;
+  grid-template-rows: auto  auto  auto  ;
+/*   background-color: #2196F3; */
+  padding: 10px;
+}
+.grid-item {
+  @include grid-ecran-ipad;
+/*    background-color: rgba(255, 255, 255, 0.8);  */
+  /* border: 1px solid rgba(0, 0, 0, 0.8); */
+  padding: 10px;
+  font-size: 30px;
+  text-align: center;
+}
+
+
+
+
+
+
+.background {
+    display: flex;
+    flex-direction: row;
+  height: auto;
+
+
+  @include ecran-ipad;
+ /*  @include ecran-moyen-mini; */
+
+
+& .navigation {
+    font-size: 20px;
+    @include bouton-ecran-large;
+
+}
+
+& .navigation2 {
+    font-size: 20px;
+    @include bouton-ecran-large;
+
+}
+  // Contrôle  -------------------------2 
+
+& .ajustementenligne {
+
+  
+
+  @include img-ecran-large-formulaire-enligne;
+width: 50%;
+height: 48vw;
+display: flex;
+flex-direction: row;
+background: no-repeat, url(../logos/etoile2.jpg);
+background-size: cover;
+border-radius: 50%;
+box-shadow: 5px 2px 5px rgb(228, 40, 40);
+border: 2px solid dodgerblue;
+margin-bottom: 0%;
+
+
+
+justify-content: center;
+& img {
+  @include img-ecran-large;
+  @include img-ecran-ipad;
+  /* @include img-ecran-moyen-mini;  */
+  border: 2px solid dodgerblue;
+  width: 175px;
+  height: 277px;
+  box-shadow: 3px 2px 5px rgb(37, 37, 37);
+  border-radius: 10%;
+}
+
+& span {
+  overflow:visible;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+justify-content: center;
+
+  opacity: 0.9;
+  color: black;
+background-color: rgb(239, 217, 241);
+box-shadow: 5px 2px 5px rgb(19, 18, 18);
+border: 2px solid dodgerblue;
+border-radius: 20%;
+padding: 0.2%;
+margin-bottom: 0.2%;
+margin-top: 0%;
+font-size: 0.8rem;
+
+}
+
+
+
+
+}
+
+
+
+
+
+
+
+
+  & .ajustement{
+      @include ajust-ecran-large;
+      @include ajust-ecran-ipad;
+      
+    width: 50%;
+   height: 48vw;
+    display: flex;
+    flex-direction: row;
+    background: no-repeat, url(../logos/etoile2.jpg);
+  background-size: cover;
+  border-radius: 50%;
+  box-shadow: 5px 2px 5px rgb(228, 40, 40);
+  border: 2px solid dodgerblue;
+  margin-bottom: 0%;
+
+
+  
+  justify-content: center;
+  
+  // Contrôle  -------------------------2
+  & img {
+    
+ /*   animation: progressif (3s); */
+    @include img-ecran-large;
+    @include img-ecran-ipad;
+    /* @include img-ecran-moyen-mini;  */
+   /*  border: 2px solid dodgerblue; */
+    width: 175px;
+    height: 277px;
+    box-shadow: 3px 2px 5px rgb(37, 37, 37);
+    border-radius: 10%;
+  }
+    
+  
+  
+  
+  
+  & .question{
+      
+   
+      display: flex;
+    justify-content: center;
+  flex-direction: column;
+
+
+  & .haut { 
+    display: flex;
+    margin-top: -2%;
+    align-items: center;
+    
+    justify-content: center;
+    margin-bottom: 1%;
+  
+}   //fermeture haut
+  
+
+
+  & .centre {
+    display: flex;
+
+    align-items: center;
+    
+    justify-content: center;
+
+  } 
+
+
+
+  & .bas {
+      margin-top: 1%;
+
+    display: flex;
+    
+    align-items: center;
+    
+    justify-content: center;
+  
+
+} 
+    & .animcroix {
+      position: absolute; 
+      margin-top: 0.2%;
+     
+      img {    
+        @include img-ecran-smartphone-retouche;
+        border: 2px solid dodgerblue;
+        box-shadow: 3px 2px 5px rgb(37, 37, 37);
+    @include img-ecran-large ;
+        animation: progressifretourne 3s  ;
+        margin: 0.2%;
+    
+        
+      /*   border: 2px solid dodgerblue;
+      flex-wrap: nowrap;
+      margin: 0.2%;
+      width: 170px;
+      height: 270px; */
+      }
+   
+    
+    }
+    
+    & .animcroix2 {
+   
+      margin-top: 01%;
+     img {
+      animation: progressifretournedos 3s  ;
+      @include img-ecran-smartphone-retouche;
+      border-radius: 20%;
+    margin: 0.2%;
+      
+    
+     
+      
+      }
+
+    }
+
+// Animation des images pour les questions 
+    & img {
+      animation: progressif 5s  ;
+      
+   
+      @include img-ecran-large ;
+
+    
+      flex-wrap: nowrap;
+      margin: 0.2%;
+    
+
+    }
+
+
+ 
+
+ 
+& .anim { position: relative;
+      } 
+
+  & .anim2 { position: relative;
+    & .haut { 
+      display: flex;
+      margin-top: -2%;
+      align-items: center;
+      
+      justify-content: center;
+      margin-bottom: 1%;
+    
+  }   //fermeture haut
+    
+  
+  
+    & .centre {
+      display: flex;
+  
+      align-items: center;
+      
+      justify-content: center;
+  
+    } 
+  
+  
+  
+    & .bas {
+        margin-top: 1%;
+
+      display: flex;
+      
+      align-items: center;
+      
+      justify-content: center;
+    
+ 
+  }    } 
+  // Contrôle  -------------------------3 
+ 
+  & span {
+  
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+  justify-content: center;
+  
+    opacity: 0.9;
+    color: black;
+  background-color: rgb(239, 217, 241);
+  box-shadow: 5px 2px 5px rgb(19, 18, 18);
+  border: 2px solid dodgerblue;
+  border-radius: 20%;
+  padding: 0.2%;
+  margin-bottom: 0.2%;
+  margin-top: -4%;
+  font-size: 0.8rem;
+ 
+& fieldset {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  
+  & input {
+    text-align: center;
+    display: flex;
+    width:300px;
+        height: 100%;
+        border-radius: 20%;
+        margin: 0.1%
+      }
+
+
+}  
+& button{
+
+
+
+  width: 10%;
+  justify-content: center;
+
+background-color: rgb(204, 121, 12);
+  border-radius: 20%;
+  color: white;
+  margin-left: 1%;
+  &:hover{
+    color: black;
+    background-color: rgb(105, 204, 12);
+  }
+}
+  & textarea {text-align: center;
+    border-radius: 20%;
+   
+      }
+ 
+  }
+   
+  
+  }
+  
+  
+  
+   
+  
+  }
+  }
+  

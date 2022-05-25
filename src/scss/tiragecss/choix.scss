@@ -1,0 +1,143 @@
+
+
+@import "../mixin";
+
+
+
+.choix { 
+    @include typo-ecran-ipad-menu_choix;
+font-size: 2rem;
+    width: 80%;
+    margin: 5%;
+    padding-bottom: 5%;
+  display: flex;
+  flex-direction:column;
+  color: white;
+  
+  background: no-repeat, url(../logos/nuit.jpg);
+  box-shadow: 5px 2px 5px rgb(119, 53, 53);
+  
+  border-radius: 20%;   text-shadow:
+  dodgerblue -1px 1px 1px,
+  dodgerblue -1px 1px 1px,
+  dodgerblue -1px -1px 1px,
+  dodgerblue 1px -1px 1px; 
+& p {
+background-color: rgb(168, 154, 154);
+  margin-top: 2%;
+  
+  border-radius: 20%;
+  box-shadow: 5px 2px 5px rgb(119, 53, 53);
+  &:hover {
+
+    text-shadow:
+    black -1px 1px 1px,
+    black -1px 1px 1px,
+    black -1px -1px 1px,
+    black -1px -1px 1px; 
+
+   }
+}
+@include typo-ecran-large-menu_choix;
+  & .calquesdeschoix {
+   
+    display: flex;
+    flex-direction:row;
+    @include ecran-iphone-menu_choix;
+    align-items: center;
+    text-shadow:
+   dodgerblue -1px 1px 1px,
+   dodgerblue -1px 1px 1px,
+   dodgerblue -1px -1px 1px,
+   dodgerblue 1px -1px 1px; 
+
+   
+    justify-content: center;
+   
+    margin-top: 4%;
+
+    & .premier{
+      width: 250px;
+      height: 400px;
+      margin: 3%;
+
+
+      &:hover {
+     
+       
+       
+        cursor: pointer;
+        & img {
+transition: 2s;
+opacity: 0.9;
+box-shadow: 5px 2px 8px rgb(12, 12, 12);
+border: red solid 1px;
+          border-radius: 20%;
+        }
+        
+              }
+    }
+
+
+
+    & .deuxieme{
+      width: 250px;
+      height: 400px;
+      margin: 3%;
+      &:hover {
+      
+        cursor: pointer;
+        & img {
+          transition: 2s;
+          opacity: 0.9;
+          box-shadow: 5px 2px 8px rgb(12, 12, 12);
+          border: red solid 1px;
+                    border-radius: 20%;
+        }
+        
+              }
+    }
+
+    & .troisieme{@include img-ecran-large-menu_choix;
+      width: 250px;
+      height: 400px;
+      margin: 3%;
+      width: 15%;
+      @include choix-ecran-ipad;
+      &:hover {
+       
+        cursor: pointer;
+        & img {
+         
+          width: 250px;
+          height: 400px;
+          transition: 2s;
+          opacity: 0.9;
+          box-shadow: 5px 2px 8px rgb(12, 12, 12);
+          border: red solid 1px;
+                    border-radius: 20%;
+        }
+        
+              }
+    }
+
+
+  }
+  
+    & img {
+   
+      
+      
+      width: 100%;
+      height: 100%;
+      border-radius: 5%;
+      box-shadow: 3px 2px 3px rgb(24, 23, 23);
+    }
+
+    
+  
+  }
+  
+  
+  
+  

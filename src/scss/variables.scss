@@ -1,5 +1,19 @@
-$smartphone: 700px;
+$smartphone: 830px;   //ancienement 700
 
 $ipadmax:700px; $ipadmin: 1001px;
 
-//Note :  en desosus de 520 pixels, il y a un problème d'affichage
+
+
+
+ //ecran smartphone :  700  ecran ipad =>  1700    ecran large  =>  3900 
+
+$ecranlarge : 2700px;  //au minimum dès qu'il atteind 3900 px il passe sur écran large
+   
+$redimcarteecranmoyens : 1000px;  //au minimum dès qu'il atteind 18800 px il n'est plus actif
+
+//min et max ipad site tirage 
+
+$ipadmaxcarte:1700px; $ipadmincarte: 00px;   //ancienement 3000
+
+// max smartphone 
+$smartphonechoix: 1300px;

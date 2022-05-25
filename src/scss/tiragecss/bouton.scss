@@ -1,0 +1,45 @@
+.navigation {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-right: 5%;
+   
+    & button {
+      margin-bottom: 30%;
+      border-radius: 20%;
+  &:hover {
+  color: #e90d1b;
+  background-color: #aacfe7;
+  }
+  
+    }
+    
+  color: white;
+  
+  }
+  
+  
+  
+  
+  
+   .navigation2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 5%;
+    
+  
+  
+    & button {
+      margin-bottom: 30%;
+      border-radius: 20%;
+  &:hover {
+  color: #e90d1b;
+  background-color: #aacfe7;
+  }
+  
+    }
+    
+  color: white;
+  
+  } 

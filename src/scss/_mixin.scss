@@ -1,3 +1,515 @@
+@import "./variables.scss";
+// La boule de cristale
+@mixin ajust-ecran-large {
+  @media only screen and (min-width: $ecranlarge)  {
+
+    width: 45%;
+    height: 100%;
+ 
+    }
+    
+
+
+  } 
+
+
+  // ajust le formulaire login pour écran larges 
+
+
+  @mixin ajust-login-ecran-large {
+    @media only screen and (min-width: $ecranlarge)  {
+  
+      width: 35%;
+      height: 50%;
+   & input {
+
+    
+    height: 5%;
+
+   }
+      }
+      
+  
+  
+    } 
+// Toutes les propriétées écrans larges
+@mixin ecran-large {
+  @media only screen  and (min-width: $ecranlarge)   {
+
+
+    display: flex;
+    flex-direction: row;
+  height: 37.5vw;
+
+
+  & .ajustement{
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    background: no-repeat, url(../logos/etoile2.jpg);
+  background-size: cover;
+  border-radius: 50%;
+  box-shadow: 5px 2px 5px rgb(18, 43, 184);
+  border: 2px solid dodgerblue;
+  margin-bottom: 0%;
+  
+
+  
+  justify-content: center;
+  
+  
+  & img {
+
+   
+  }
+  
+  
+  
+  
+  
+  & .question{
+
+    display: flex;
+    justify-content: center;
+  flex-direction: column;
+  
+    & .haut { 
+      display: flex;
+      margin-top: -1%;
+      align-items: center;
+      
+      justify-content: center;
+      margin-bottom: 1%;
+    
+  }   //fermeture haut
+    
+  
+  
+    & .centre {
+      width: 100%;
+      display: flex;
+     ;
+      align-items: center;
+      
+      justify-content: center;
+   
+  
+    } 
+  
+  
+  
+    & .bas {
+        margin-top: 1%;
+
+      display: flex;
+      
+      align-items: center;
+      
+      justify-content: center;
+    
+ 
+  }          
+  & span {
+    display: flex;
+  justify-content: center;
+  
+   
+    color: black;
+  background-color: rgb(239, 217, 241);
+  box-shadow: 5px 2px 5px rgb(19, 18, 18);
+  border: 2px solid dodgerblue;
+  border-radius: 20%;
+  padding: 0.2%;
+  margin-bottom: 1%;
+  margin-top: 0%;
+  font-size: 1.2rem;
+  }
+   
+  
+  }
+  
+  
+  
+   
+  
+  }
+    }
+    
+
+
+  } 
+
+  @mixin bouton-ecran-large {
+    @media only screen and (min-width: $ecranlarge)  {
+font-size: 30px;
+   
+      }
+      
+  
+  
+    } 
+
+// Les images écrans larges
+
+@mixin img-ecran-large-formulaire-enligne {
+  @media only screen and (min-width: $ecranlarge)  {
+    width: 45%;
+    height: 36vw;
+
+    }
+    
+
+
+  } 
+
+
+
+
+  @mixin img-ecran-large {
+    @media only screen and (min-width: $ecranlarge)  {
+      width: 285px;
+      height: 387px;
+
+      }
+      
+  
+  
+    } 
+
+    @mixin img-ecran-large-menu_choix {
+      @media only screen and (min-width: $ecranlarge)  {
+
+
+  
+        width: 250px;
+        height: 400px;
+          border-radius: 5%;
+          box-shadow: 3px 2px 3px rgb(24, 23, 23);
+      
+
+
+ 
+  
+        }
+        
+    
+    
+      } 
+
+      @mixin img-ecran-large-menu_choix_bougie {
+        @media only screen and (min-width: $ecranlarge)  {
+  
+  width: 100%;
+    height: 10vw;
+         
+            border-radius: 5%;
+            
+        
+  
+  
+   
+    
+          }
+          
+      
+      
+        } 
+
+      @mixin typo-ecran-large-menu_choix {
+        @media only screen and (min-width: $ecranlarge)  {
+  
+  
+    
+          font-size: 3rem;;
+        
+  
+  
+   
+    
+          }
+          
+      
+      
+        } 
+
+// Partie IPAD 
+
+//menu choix des cartes 
+
+
+@mixin typo-ecran-ipad-menu_choix {
+  @media only screen and (max-width: $ipadmaxcarte) and (min-width: $ipadmincarte)  {
+
+
+
+    font-size: 1.3rem;;
+  
+
+
+
+
+    }
+    
+
+
+  } 
+
+
+
+@mixin choix-ecran-ipad {
+  @media only screen and (max-width: $ipadmaxcarte) and (min-width: $ipadmincarte)   {
+
+
+
+   
+   
+
+     
+   
+     
+      
+     
+    
+     
+          
+       
+         
+        width: 250px;
+        height: 400px;
+        border-radius: 5%;
+        box-shadow: 3px 2px 3px rgb(24, 23, 23);
+     
+    
+      
+    
+    }
+  }
+
+  
+ 
+
+
+
+    @mixin ecran-ipad {
+      @media only screen and (max-width: $ipadmaxcarte) and (min-width: $ipadmincarte)   {
+    
+
+        display: flex;
+        flex-direction: row;
+     
+ 
+     
+
+    
+    
+    & .navigation {
+       visibility: hidden; 
+   width: 0.1%; 
+   margin: 0px;
+   padding: 0px;
+   & button {
+font-size: 0.1px;
+
+   }
+    
+    }
+    
+    & .navigation2 {
+       visibility: hidden; 
+    margin: 0px;
+    width: 0.1%;
+    & button {
+      font-size: 0.1px;
+      padding: 0px;
+         }
+    }
+    
+  
+
+
+        
+        }
+        
+    
+    
+      } 
+
+      @mixin img-ecran-ipad {
+        @media only screen and (max-width: $ipadmaxcarte) and (min-width: $ipadmincarte)  {
+      height: 100%;
+         width: 100%;
+    
+          }
+          
+      
+      
+        } 
+
+
+        @mixin grid-ecran-ipad {
+          @media only screen and (max-width: $ipadmaxcarte) and (min-width: $ipadmincarte)  {
+margin-top: -5%;
+width: 18.5vw;
+    height: 100%;  
+
+
+
+
+
+
+
+
+
+
+    
+            }
+            
+        
+        
+          }
+
+       
+
+          @mixin ajust-ecran-ipad {
+            @media only screen and (max-width: $ipadmaxcarte) and (min-width: $ipadmincarte)  {
+          
+              width: 80%;
+              height: 100%;
+           
+              }
+              
+          
+          
+            } 
+    
+
+            @mixin img-enligne-ecran-ipad {
+              @media only screen and (max-width: $ipadmaxcarte) and (min-width: $ipadmincarte)  {
+          
+               margin: 0px;
+               padding: 0px;
+              
+               display: flex;
+               flex-direction: row;
+               justify-content: center;
+                }
+                
+            
+            
+              } 
+      
+
+// partie iphone 
+
+
+@mixin ecran-iphone-menu_choix {
+  @media only screen and (max-width: $smartphonechoix)  {
+
+display: flex;
+flex-direction: column;
+
+
+
+
+
+
+    }
+    
+
+
+  }
+
+
+  @mixin img-ecran-iphone-menu_modele {
+    @media only screen and (max-width: $smartphonechoix)  {
+  
+ 
+  
+  width: 20%;
+  
+  
+  
+  
+      }
+      
+  
+  
+    }
+  
+  
+    @mixin img-enligne-ecran-smartphone {
+      @media only screen and (max-width: $smartphone)  {
+border-radius: 20%;
+opacity: 0.9;
+       margin: 0px;
+       padding: 0px;
+       background: no-repeat, url(../logos/nuit.jpg);
+     
+      
+       flex-direction: column;
+      
+       align-items: center;
+   
+        }
+        
+    
+    
+      }
+
+      @mixin img-enligne-ecran-smartphone-retouche {
+        @media only screen and (max-width: $smartphone)  {
+
+          width: 270px;
+          height: 390px;
+      margin-top: 0%;
+        margin-bottom: 3%;
+        
+      
+          }
+          
+      
+      
+        }
+    
+        @mixin img-ecran-smartphone-retouche {
+          @media only screen and (max-width: $smartphonechoix)  {
+  
+            width: 100px;
+            height: 150px;
+           /* border: rgb(72, 20, 168) solid 3px; */
+           margin-top: 3.5%;
+      
+        
+            }
+            
+        
+        
+          }
+
+          @mixin img-ecran-smartphone-retouche-ligne {
+            @media only screen and (max-width: $smartphonechoix)  {
+              display: flex;
+    justify-items: center;
+    margin: 0%;
+    justify-content: center;
+              width: 100%;
+              height: 150%;
+             /* border: rgb(72, 20, 168) solid 3px; */
+            
+    
+          
+              }
+              
+          
+          
+            }
+      
+
+//-----------partie forum
+
+
+
 @mixin smartphone-grid {
     @media only screen and (max-width: $smartphone) {
 

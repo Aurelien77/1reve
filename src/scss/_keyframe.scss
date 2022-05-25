@@ -1,0 +1,124 @@
+@keyframes progressif {
+    0%    { opacity: 0.3; }
+    20%   { opacity: 0.6; }
+    80%   { opacity: 0.9; }
+    100%  { opacity: 1; }
+  }
+
+
+  @keyframes inprogressif {
+    0%    { opacity: 1; }
+    20%   { opacity: 0.9; }
+    80%   { opacity: 0.6; }
+    100%  { opacity: 0.3; }
+  }
+  @keyframes invisible {
+
+    0% {
+    visibility: visible;
+    }
+    100% {
+      visibility: hidden;
+      }
+}
+  @keyframes progressifretournedos {
+
+    0% {
+      transform: /*  translate(100%)   */
+                 perspective(200px) 
+              /*    rotateX(0deg)  */
+                 rotateY(180deg);
+                 opacity: (1);
+               /*  width: 10%;
+                height: 10%; */
+    }
+
+
+    50% {
+      transform: /*  translate(100%)   */
+                 perspective(200px) 
+              /*    rotateX(0deg)  */
+                 rotateY(220deg);
+                 opacity: (1.3);
+               /*  width: 10%;
+                height: 10%; */
+    }
+
+    
+
+
+  100% {
+      transform: /* translate(100%)  */
+                 perspective(200px) 
+               /*   rotateX(-180deg)  */
+                 rotateY(360deg);
+                 opacity: (0);
+                /*  width:100%;
+                height:100%; */
+                
+  }
+  }
+  
+
+  @keyframes progressifretourne {
+
+    0% {
+      transform: /*  translate(100%)   */
+                 perspective(200px) 
+              /*    rotateX(0deg)  */
+                 rotateY(180deg);
+                 opacity: (0);
+               /*  width: 10%;
+                height: 10%; */
+    }
+
+
+    50% {
+      transform: /*  translate(100%)   */
+                 perspective(200px) 
+              /*    rotateX(0deg)  */
+                 rotateY(220deg);
+                 opacity: (0);
+               /*  width: 10%;
+                height: 10%; */
+    }
+
+  
+
+
+  100% {
+      transform: /* translate(100%)  */
+                 perspective(200px) 
+               /*   rotateX(-180deg)  */
+                 rotateY(360deg);
+                 opacity: (1);
+                /*  width:100%;
+                height:100%; */
+                
+  }
+  }
+  @keyframes move {
+    from {
+      transform: translatex(-100%);
+    }
+    to {
+      transform: translatex(0%);
+    }
+    0%    { opacity: 0; }
+    20%   { opacity: 0.2; }
+    80%   { opacity: 0.7; }
+    100%  { opacity: 1; }
+  }
+
+  @keyframes movebas {
+    from {
+      transform: translatey(-100%);
+    }
+    to {
+      transform: translatey(0%);
+    }
+    0%    { opacity: 0.2; }
+    20%   { opacity: 0.4; }
+    80%   { opacity: 0.7; }
+    100%  { opacity: 1; }
+  }

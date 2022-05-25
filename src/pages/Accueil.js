@@ -1,6 +1,6 @@
 
 import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
-import image from "../logos/favicon.jpg";
+import image from "../logos/favicon.ico";
 import Nav from "./Nav";
 
 import ReactPlayer from 'react-player'
@@ -42,11 +42,11 @@ function Acuueil() {
                    <div className="presentationtitre">Bienvenue  </div> <br></br>
                   <div className="presentation">  <div className="arriereplanpres">   <span className="transparent">
                     Bonjour à tous,  😊<br></br> 
-                    Ce site à pour vocation de parler des sujet de l'interpretation des rêves  🎹 <br></br> 
+                    Ce site à pour vocation de parler des sujet de l'interpretation des rêves  🦢 <br></br> 
 
            
-        Il vous permet de vous inscrire eet de noter des rêves ainsi que de disposer d'outils d'interpretations. <br></br>
-         Voici un lien didacticiel pour vous faire la main : <a href="/"> LE DIDACTICIEL </a>
+        Il vous permet de vous inscrire et de noter des rêves ainsi que de disposer d'outils d'interpretations, c'est également un site de tirage de cartes <br></br>
+        Pour en savoir plus sur l'utilisation de ce site : <a href="mailto:aurelien.monceau@gmail.com">Contacter l'administrateur</a>
         
        
         

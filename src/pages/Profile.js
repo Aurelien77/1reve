@@ -93,7 +93,7 @@ function Profile() {
                 <iframe id="imglien" className="lien"
                     loading="lazy"
                scrolling="no"
-               frameborder="10"
+               frameBorder="10"
                overflow="hidden"
                
                   src={value.lien}
