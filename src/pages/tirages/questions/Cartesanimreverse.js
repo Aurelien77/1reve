@@ -70,7 +70,7 @@ let history = useHistory();
 {/*  <EssayForm value="question" name="question" id="question" />  */}
 <span > 
   
-<form action="/animenvers" className="flexrow">
+<form action="/animenvers" method="get"  className="flexrow" >
  
 
         <fieldset>

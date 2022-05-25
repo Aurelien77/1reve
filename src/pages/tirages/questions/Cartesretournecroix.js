@@ -70,9 +70,10 @@ let history = useHistory();
 {/*  <EssayForm value="question" name="question" id="question" />  */}
 <span > 
   
-<input type="text" className="question" id="question"  name="question"> </input> <input type ="submit"  onClick={() => {
+<input type="text" className="question" id="question"  name="question" />  <input type="submit" value="Envoyer le formulaire" onClick={() => {
                 history.push(`/anim`);
-              } }>OK</input>
+              } }/>
+
 
 {/* <form action="/anim" className="flexrow">
  
