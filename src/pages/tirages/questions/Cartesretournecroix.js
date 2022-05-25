@@ -70,11 +70,15 @@ let history = useHistory();
 {/*  <EssayForm value="question" name="question" id="question" />  */}
 <span > 
   
-<form action="/anim" className="flexrow">
+<button onClick={() => {
+                history.push(`/anim`);
+              } }> Vers autres modèles </button>
+
+{/* <form action="/anim" className="flexrow">
  
 
         <fieldset>
-        {/*   <legend></legend> */}
+
       
           <input type="text" name="question" />
       
@@ -85,7 +89,12 @@ let history = useHistory();
         <button type="submit" value="OK" id="question">OK</button>
        
       </form> 
-      
+       */}
+
+
+
+
+
       </span>   
 <div className="haut">
 <div className="grid-item">
