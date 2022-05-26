@@ -54,24 +54,21 @@ const img5 = "./animaux/" + alea5 + ".jpg" ;
 
 
               
-              <div className="navigation"> <button onClick={() => {
-                history.push(`/cartesanimlign`);
-              } }> Poser une autre question </button>  <button onClick={() => {
+        
+
+
+
+            
+
+<div className="navigationreponse"> <button onClick={() => {
                 history.push(`/form`);
               } }> Vers autres models </button>
               
               
               
               </div>
-
-
-
-            
-
-
-
       <div  className="ajustementenligne">
-      
+   
   
      <div className="question">
      
@@ -79,7 +76,7 @@ const img5 = "./animaux/" + alea5 + ".jpg" ;
       <div className="test1">
 
 
-<span value="" >  {array} </span>  </div>
+<span value="" >Simulation d'une question posée ?{array} </span>  </div>
 
   
       <div className="test2">
@@ -166,23 +163,21 @@ const img5 = "./animaux/" + alea5 + ".jpg" ;
       </div>
         
       </div>
-      
+      </div>    
       </div>
-    
+      <div className="navigationreponse"><button onClick={() => {
+                history.push(`/anim2`);
+              } }> Tirage même question </button>  
+              
+              
+              
+              </div>
       </div>
       
       
      
       
-      <div className="navigation2"> <button onClick={() => {
-                history.push(`/anim2`);
-              } }> Tirage même question </button>  <button onClick={() => {
-                history.push(`/choix`);
-              } }> Choix d'autres cartes </button>
-              
-              
-              
-              </div> </div>
+  
     );
   }
   

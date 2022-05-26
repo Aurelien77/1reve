@@ -43,7 +43,7 @@ function Cartestarotslignereverse() {
 
 
               
-              <div className="navigation">   <button onClick={() => {
+<div className="navigationquestion">   <button onClick={() => {
                 history.push(`/tarots2reverse`);
               } }> Vers autres models </button>
               
@@ -67,9 +67,12 @@ function Cartestarotslignereverse() {
 
 
       <span > 
-      <input type="text" className="question" id="question"  name="question" />  <input type="submit" value="Envoyer le formulaire" onClick={() => {
+      <input type="text" className="question" id="question"  name="question" />  
+      
+      
+      <button value="OK" onClick={() => {
                 history.push(`/tarots2reverse`);
-              } }/>
+              } }> OK </button>
      {/*  <form action="/tarots2reverse" className="flexrow">
     
    
@@ -141,13 +144,13 @@ function Cartestarotslignereverse() {
       
      
       
-      <div className="navigation2">   <button onClick={() => {
+<div className="navigationquestion">   <button onClick={() => {
                 history.push(`/choix`);
               } }> Choix d'autres cartes </button>
               
               
               
-              </div> </div>
+              </div></div>
     );
   }
   

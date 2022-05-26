@@ -43,7 +43,7 @@ function Cartestirageligne() {
 
 
               
-              <div className="navigation">   <button onClick={() => {
+<div className="navigationquestion">   <button onClick={() => {
                 history.push(`/form2`);
               } }> Vers autres models </button>
               
@@ -66,10 +66,10 @@ function Cartestirageligne() {
        <div className="test1">
  
  
-       <span > 
-       <input type="text" className="question" id="question"  name="question" />  <input type="submit" value="Envoyer le formulaire" onClick={() => {
+       <span >  <input type="text" className="question" id="question"  name="question" />  
+       <button value="OK" onClick={() => {
                 history.push(`/tirage2`);
-              } }/>
+              } }> OK </button>
  {/*   <form action="/tirage2" className="flexrow">
     
    
@@ -143,7 +143,7 @@ function Cartestirageligne() {
       
      
       
-      <div className="navigation2">   <button onClick={() => {
+       <div className="navigationquestion">   <button onClick={() => {
                 history.push(`/choix`);
               } }> Choix d'autres cartes </button>
               

@@ -43,7 +43,7 @@ function Cartesanimlign() {
 
 
               
-              <div className="navigation">   <button onClick={() => {
+              <div className="navigationquestion">   <button onClick={() => {
                 history.push(`/form`);
               } }> Vers autres models </button>
               
@@ -67,9 +67,12 @@ function Cartesanimlign() {
 
 
       <span > 
-      <input type="text" className="question" id="question"  name="question" />  <input type="submit" value="Envoyer le formulaire" onClick={() => {
+      <input type="text" className="question" id="question"  name="question" />  
+      
+      
+      <button value="OK" onClick={() => {
                 history.push(`/anim2`);
-              } }/>
+              } }> OK </button>
   {/* <form action="/anim2" className="flexrow">
    
   
@@ -142,7 +145,7 @@ function Cartesanimlign() {
       
      
       
-      <div className="navigation2">   <button onClick={() => {
+      <div className="navigationquestion">   <button onClick={() => {
                 history.push(`/choix`);
               } }> Choix d'autres cartes </button>
               

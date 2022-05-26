@@ -1,16 +1,314 @@
 @import "./variables.scss";
-// La boule de cristale
-@mixin ajust-ecran-large {
-  @media only screen and (min-width: $ecranlarge)  {
 
-    width: 45%;
-    height: 100%;
+
+
+
+
+
+//Mixin iphone =>    retouche les images en ligne sur iphone
+
+@mixin img-ecran-smartphone-retouche-ligne {
+  @media only screen and (max-width: $smartphonechoix)  {
+    display: flex;
+justify-items: center;
+margin: 0%;
+justify-content: center;
+    width: 100%;
+    height: 150%;
+   /* border: rgb(72, 20, 168) solid 3px; */
+  
+   img {
+  
+    border: 2px solid dodgerblue;
+    flex-wrap: nowrap;
+  
+    width: 12vw;
+    height: 19vw; 
+    
+  }
  
+
     }
     
 
 
-  } 
+  }
+  //Mixin iphone =>    retouche les images en ligne sur ipad et ++
+  @mixin carte-en-ligne-pour-ipad-plus {
+    @media only screen and (min-width:$ipadmax  )  {
+
+// Ancienement  (min-width:$ipadmax  ) and (max-width:$ecraninfini )  
+
+
+display: flex;
+flex-direction: row;
+
+
+
+
+img {
+  
+  border: 2px solid dodgerblue;
+  flex-wrap: nowrap;
+
+  width: 12vw;
+  height: 19vw; 
+  
+}
+
+
+
+      }
+ 
+     
+  
+    }
+
+//mixine smarthpone => retouche des images en ligne pour smartphones
+@mixin ecran-iphone-carte_en_ligne {
+  @media only screen and (max-width: $smartphone)  {
+
+display: flex;
+flex-direction: column;
+
+font-size: 1rem;
+
+
+        
+    
+
+
+    }
+    
+    
+  }
+
+  @mixin ecran-iphone-bouton_en_ligne {
+    @media only screen and (max-width: $smartphone)  {
+  
+width: 100%;
+  
+  font-size: 1rem;
+  
+  
+  
+  
+      }
+      
+    }
+  
+
+    @mixin ecran-iphone-bouton_en_lignequestion {
+      @media only screen and (max-width: $smartphone)  {
+    
+  width: 100%;
+    
+    font-size: 1rem;
+    
+    & button {
+
+      width: 100%;
+    }
+ 
+    
+        }
+        
+      }
+    
+//Modification des images smartphones
+      @mixin ecran-iphone-modif-taille-images {
+        @media only screen and (max-width: $smartphone)  {
+      img {
+
+        width: 35vw;
+      
+        height: 50vw;
+      }
+  
+         
+      
+      
+          }
+
+     
+          
+          
+        }
+    
+//Modification des image smartphones tirage en croix 
+
+@mixin ecran-iphone-modif-margetop-images-croix {
+  @media only screen and (max-width: $smartphone)  {
+display: flex;
+flex-direction: column;
+
+align-items: center;
+
+margin-top: 50vw;
+    border-radius: 20%;
+    background: no-repeat, url(../logos/lotus.jpg);
+/*   
+        margin-left: -27%;
+        margin-top: 160%; */
+    
+
+
+    }
+ 
+
+    
+  }
+  
+@mixin ecran-iphone-modif-button-images-croix {
+  @media only screen and (max-width: $smartphone)  {
+
+
+  width: 100%;
+
+
+
+
+ 
+
+    }
+ 
+
+    
+  }
+
+  @mixin ecran-iphone-modif-span-images-croix {
+    @media only screen and (max-width: $smartphone)  {
+  
+position: absolute;
+
+  background-color: #d1515a;
+  display: flex;
+margin-top: 130vw;
+justify-items: center;
+justify-content: center;
+    align-items: center;
+    align-content: center;
+  
+   
+  
+      }
+   
+  
+      
+    }
+
+
+  @mixin ecran-iphone-modif-images-croix {
+    @media only screen and (max-width: $smartphone)  {
+  margin: 0px;
+      width: 30vw;
+     height: 40vw;
+  
+          
+      
+  
+  
+      }
+   
+  
+      
+    }
+
+//Modification img smartphone croix tirage 
+
+
+
+
+@mixin smartphone-img-croix {
+  @media only screen and (max-width: $smartphone) {
+
+
+
+
+    height: 40vw;
+    width: 32vw;
+
+
+  }
+}
+
+
+
+
+
+
+
+
+//Modif ecran large images en croix 
+
+@mixin ajust-ecran-large-croix {
+  @media only screen and (min-width: $ecranlarge)  {
+
+display: flex;
+background-color: #d1515a;
+  height:  36vw;
+  width: 50%;
+ 
+
+    }
+    
+
+
+  }
+  @mixin ajust-ecran-large-img-croix {
+    @media only screen and (min-width: $ecranlarge)  {
+  
+  display: flex;
+  background-color: #d1515a;
+  width: 7vw;
+  height: 10vw;
+  display: flex;
+  margin-bottom: 8px;
+  margin-left: 8px;
+  margin-right: 8px;
+  
+      }
+      
+  
+  
+    }
+    
+    @mixin ajust-ecran-large-img-croix-tirage {
+      @media only screen and (min-width: $ecranlarge)  {
+    
+ display: flex;
+ flex-direction: column;
+    background-color: #d1515a;
+    width: 7vw;
+    height: 10vw;  
+      margin-top: 0px;
+      margin-bottom: 8px;
+      margin-left: 8px;
+      margin-right: 8px;
+    padding: 0%;
+        }
+        
+    
+    
+      }
+
+      @mixin ajust-ecran-large-img-croixseconde-tirage {
+        @media only screen and (min-width: $ecranlarge)  {
+          display: flex;
+          flex-direction: column;
+      background-color: #d1515a;
+   
+
+      width: 7vw;
+      height: 10vw; 
+     
+          }
+          
+      
+      
+        }
+
+// La boule de cristale pour ecran large
 
 
   // ajust le formulaire login pour écran larges 
@@ -33,112 +331,7 @@
   
     } 
 // Toutes les propriétées écrans larges
-@mixin ecran-large {
-  @media only screen  and (min-width: $ecranlarge)   {
 
-
-    display: flex;
-    flex-direction: row;
-  height: 37.5vw;
-
-
-  & .ajustement{
-    width: auto;
-    height: auto;
-    display: flex;
-    flex-direction: row;
-    background: no-repeat, url(../logos/etoile2.jpg);
-  background-size: cover;
-  border-radius: 50%;
-  box-shadow: 5px 2px 5px rgb(18, 43, 184);
-  border: 2px solid dodgerblue;
-  margin-bottom: 0%;
-  
-
-  
-  justify-content: center;
-  
-  
-  & img {
-
-   
-  }
-  
-  
-  
-  
-  
-  & .question{
-
-    display: flex;
-    justify-content: center;
-  flex-direction: column;
-  
-    & .haut { 
-      display: flex;
-      margin-top: -1%;
-      align-items: center;
-      
-      justify-content: center;
-      margin-bottom: 1%;
-    
-  }   //fermeture haut
-    
-  
-  
-    & .centre {
-      width: 100%;
-      display: flex;
-     ;
-      align-items: center;
-      
-      justify-content: center;
-   
-  
-    } 
-  
-  
-  
-    & .bas {
-        margin-top: 1%;
-
-      display: flex;
-      
-      align-items: center;
-      
-      justify-content: center;
-    
- 
-  }          
-  & span {
-    display: flex;
-  justify-content: center;
-  
-   
-    color: black;
-  background-color: rgb(239, 217, 241);
-  box-shadow: 5px 2px 5px rgb(19, 18, 18);
-  border: 2px solid dodgerblue;
-  border-radius: 20%;
-  padding: 0.2%;
-  margin-bottom: 1%;
-  margin-top: 0%;
-  font-size: 1.2rem;
-  }
-   
-  
-  }
-  
-  
-  
-   
-  
-  }
-    }
-    
-
-
-  } 
 
   @mixin bouton-ecran-large {
     @media only screen and (min-width: $ecranlarge)  {
@@ -176,6 +369,8 @@ font-size: 30px;
   
   
     } 
+
+
 
     @mixin img-ecran-large-menu_choix {
       @media only screen and (min-width: $ecranlarge)  {
@@ -291,49 +486,6 @@ font-size: 30px;
 
 
 
-    @mixin ecran-ipad {
-      @media only screen and (max-width: $ipadmaxcarte) and (min-width: $ipadmincarte)   {
-    
-
-        display: flex;
-        flex-direction: row;
-     
- 
-     
-
-    
-    
-    & .navigation {
-       visibility: hidden; 
-   width: 0.1%; 
-   margin: 0px;
-   padding: 0px;
-   & button {
-font-size: 0.1px;
-
-   }
-    
-    }
-    
-    & .navigation2 {
-       visibility: hidden; 
-    margin: 0px;
-    width: 0.1%;
-    & button {
-      font-size: 0.1px;
-      padding: 0px;
-         }
-    }
-    
-  
-
-
-        
-        }
-        
-    
-    
-      } 
 
       @mixin img-ecran-ipad {
         @media only screen and (max-width: $ipadmaxcarte) and (min-width: $ipadmincarte)  {
@@ -347,64 +499,24 @@ font-size: 0.1px;
         } 
 
 
-        @mixin grid-ecran-ipad {
-          @media only screen and (max-width: $ipadmaxcarte) and (min-width: $ipadmincarte)  {
-margin-top: -5%;
-width: 18.5vw;
-    height: 100%;  
-
-
-
-
-
-
-
-
-
-
-    
-            }
-            
-        
-        
-          }
-
+      
        
 
-          @mixin ajust-ecran-ipad {
-            @media only screen and (max-width: $ipadmaxcarte) and (min-width: $ipadmincarte)  {
-          
-              width: 80%;
-              height: 100%;
-           
-              }
-              
-          
-          
-            } 
-    
 
-            @mixin img-enligne-ecran-ipad {
-              @media only screen and (max-width: $ipadmaxcarte) and (min-width: $ipadmincarte)  {
-          
-               margin: 0px;
-               padding: 0px;
-              
-               display: flex;
-               flex-direction: row;
-               justify-content: center;
-                }
-                
-            
-            
-              } 
-      
+
+
+
+
+
+
+
+
 
 // partie iphone 
 
 
 @mixin ecran-iphone-menu_choix {
-  @media only screen and (max-width: $smartphonechoix)  {
+  @media only screen and (max-width: $smartphone)  {
 
 display: flex;
 flex-direction: column;
@@ -422,7 +534,7 @@ flex-direction: column;
 
 
   @mixin img-ecran-iphone-menu_modele {
-    @media only screen and (max-width: $smartphonechoix)  {
+    @media only screen and (max-width: $smartphone)  {
   
  
   
@@ -438,72 +550,10 @@ flex-direction: column;
     }
   
   
-    @mixin img-enligne-ecran-smartphone {
-      @media only screen and (max-width: $smartphone)  {
-border-radius: 20%;
-opacity: 0.9;
-       margin: 0px;
-       padding: 0px;
-       background: no-repeat, url(../logos/nuit.jpg);
-     
-      
-       flex-direction: column;
-      
-       align-items: center;
-   
-        }
-        
-    
-    
-      }
 
-      @mixin img-enligne-ecran-smartphone-retouche {
-        @media only screen and (max-width: $smartphone)  {
 
-          width: 270px;
-          height: 390px;
-      margin-top: 0%;
-        margin-bottom: 3%;
-        
-      
-          }
-          
-      
-      
-        }
-    
-        @mixin img-ecran-smartphone-retouche {
-          @media only screen and (max-width: $smartphonechoix)  {
+
   
-            width: 100px;
-            height: 150px;
-           /* border: rgb(72, 20, 168) solid 3px; */
-           margin-top: 3.5%;
-      
-        
-            }
-            
-        
-        
-          }
-
-          @mixin img-ecran-smartphone-retouche-ligne {
-            @media only screen and (max-width: $smartphonechoix)  {
-              display: flex;
-    justify-items: center;
-    margin: 0%;
-    justify-content: center;
-              width: 100%;
-              height: 150%;
-             /* border: rgb(72, 20, 168) solid 3px; */
-            
-    
-          
-              }
-              
-          
-          
-            }
       
 
 //-----------partie forum

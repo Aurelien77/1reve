@@ -53,9 +53,13 @@ let history = useHistory();
       <div  className="background ">
 
 
-<div className="navigation"> <button onClick={() => {
+<div className="navigationquestion">   <button onClick={() => {
                 history.push(`/form3`);
-              } }> Vers autres modèles </button> </div>
+              } }> Vers autres models </button>
+              
+              
+              
+              </div>
 
 
               
@@ -70,9 +74,12 @@ let history = useHistory();
 {/*  <EssayForm value="question" name="question" id="question" />  */}
 <span > 
 
-<input type="text" className="question" id="question"  name="question" />  <input type="submit" value="Envoyer le formulaire" onClick={() => {
-                history.push(`/tarotsrenverse`);
-              } }/>
+  <input type="text" className="question" id="question"  name="question" />  
+        
+        
+        <button value="OK" onClick={() => {
+                  history.push(`/tarotsrenverse`);
+                } }> OK </button>
 {/*   
 <form action="/tarotsrenverse" className="flexrow">
  
@@ -143,9 +150,13 @@ let history = useHistory();
       
       
       
-      <div className="navigation2">  <button onClick={() => {
+      <div className="navigationquestion">   <button onClick={() => {
                 history.push(`/choix`);
-              } }>Choix d'autres cartes</button>  </div></div>
+              } }> Choix d'autres cartes </button>
+              
+              
+              
+              </div></div>
     );
   }
   

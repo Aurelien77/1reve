@@ -43,17 +43,14 @@ function Cartestarotsligne() {
 
 
               
-              <div className="navigation"> 
-              
-              
-              
-                <button onClick={() => {
+<div className="navigationquestion">   <button onClick={() => {
                 history.push(`/form3`);
               } }> Vers autres models </button>
               
               
               
               </div>
+
 
 
 
@@ -72,9 +69,12 @@ function Cartestarotsligne() {
  
        <span > 
    
-<input type="text" className="question" id="question"  name="question" />  <input type="submit" value="Envoyer le formulaire" onClick={() => {
+       <input type="text" className="question" id="question"  name="question" />  
+      
+      
+      <button value="OK" onClick={() => {
                 history.push(`/tarots2`);
-              } }/>
+              } }> OK </button>
  {/*   <form action="/tarots2" className="flexrow">
     
    
@@ -147,7 +147,7 @@ function Cartestarotsligne() {
       
      
       
-      <div className="navigation2">   <button onClick={() => {
+       <div className="navigationquestion">   <button onClick={() => {
                 history.push(`/choix`);
               } }> Choix d'autres cartes </button>
               

@@ -43,13 +43,15 @@ function Cartesanimlignretourn() {
 
 
               
-              <div className="navigation">   <button onClick={() => {
+             
+<div className="navigationquestion">   <button onClick={() => {
                 history.push(`/form`);
               } }> Vers autres models </button>
               
               
               
               </div>
+
 
 
 
@@ -67,9 +69,9 @@ function Cartesanimlignretourn() {
  
  
        <span > 
-       <input type="text" className="question" id="question"  name="question" />  <input type="submit" value="Envoyer le formulaire" onClick={() => {
+       <input type="text" className="question" id="question"  name="question" />  <button value="OK" onClick={() => {
                 history.push(`/anim3`);
-              } }/>
+              } }> OK </button>
   {/*  <form action="/anim3" className="flexrow">
     
    
@@ -143,7 +145,8 @@ function Cartesanimlignretourn() {
       
      
       
-      <div className="navigation2">   <button onClick={() => {
+     
+       <div className="navigationquestion">   <button onClick={() => {
                 history.push(`/choix`);
               } }> Choix d'autres cartes </button>
               

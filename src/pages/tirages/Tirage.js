@@ -42,11 +42,13 @@ const img5 = "./oracle/" + alea5 + ".jpg" ;
     return (
      
       <div  className="background ">
-<div className="navigation"> <button onClick={() => {
-                history.push(`/cartestiragecroix`);
-              } }> Poser une autre question </button>  <button onClick={() => {
+<div className="navigationreponse"> <button onClick={() => {
                 history.push(`/form2`);
-              } }> Vers autres models </button></div>
+              } }> Vers autres models </button>
+              
+              
+              
+              </div>
 
 
 
@@ -59,7 +61,7 @@ const img5 = "./oracle/" + alea5 + ".jpg" ;
 
 
    
-      <span value="" > {/* {recupere} */}  {array}
+      <span value="" > Simulation d'une question posée ?{/* {recupere} */}  {array}
   </span>
 
 <div className="animcroix">
@@ -162,11 +164,9 @@ const img5 = "./oracle/" + alea5 + ".jpg" ;
       
       
       
-      <div className="navigation2"> <button onClick={() => {
+      <div className="navigationreponse"><button onClick={() => {
                 history.push(`/tirage`);
-              } }> Tirage même question </button>  <button onClick={() => {
-                history.push(`/choix`);
-              } }> Choix d'autres cartes </button>
+              } }> Tirage même question </button>  
               
               
               

@@ -50,12 +50,18 @@ let history = useHistory();
 
     return (
      
-      <div  className="background ">
+      <div  className="background">
 
 
-<div className="navigation"> <button onClick={() => {
+  
+<div className="navigationquestion">   <button onClick={() => {
                 history.push(`/form`);
-              } }> Vers autres modèles </button> </div>
+              } }> Vers autres models </button>
+              
+              
+              
+              </div>
+
 
 
               
@@ -65,38 +71,41 @@ let history = useHistory();
      
       <div className="question grid-container">
 
-
+      <span > 
+  
+  <input type="text" className="question" id="question"  name="question" />  
+        
+        
+        <button value="OK" onClick={() => {
+                  history.push(`/anim`);
+                } }> OK </button>
+  
+  
+  {/* <form action="/anim" className="flexrow">
+   
+  
+          <fieldset>
+  
+        
+            <input type="text" name="question" />
+        
+         
+          
+  
+          </fieldset>   
+          <button type="submit" value="OK" id="question">OK</button>
+         
+        </form> 
+         */}
+  
+  
+  
+  
+  
+        </span> 
 
 {/*  <EssayForm value="question" name="question" id="question" />  */}
-<span > 
   
-<input type="text" className="question" id="question"  name="question" />  <input type="submit" value="Envoyer le formulaire" onClick={() => {
-                history.push(`/anim`);
-              } }/>
-
-
-{/* <form action="/anim" className="flexrow">
- 
-
-        <fieldset>
-
-      
-          <input type="text" name="question" />
-      
-       
-        
-
-        </fieldset>   
-        <button type="submit" value="OK" id="question">OK</button>
-       
-      </form> 
-       */}
-
-
-
-
-
-      </span>   
 <div className="haut">
 <div className="grid-item">
     
@@ -149,9 +158,13 @@ let history = useHistory();
       
       
       
-      <div className="navigation2">  <button onClick={() => {
+      <div className="navigationquestion">   <button onClick={() => {
                 history.push(`/choix`);
-              } }>Choix d'autres cartes</button>  </div></div>
+              } }> Choix d'autres cartes </button>
+              
+              
+              
+              </div></div>
     );
   }
   

@@ -47,15 +47,13 @@ const img5 = "../tarots/" + alea5 + ".jpg" ;
 
 
               
-      <div className="navigation"> <button onClick={() => {
-        history.push(`/cartestarotslignereverse`);
-      } }> Poser une autre question </button>  <button onClick={() => {
-        history.push(`/form3`);
-      } }> Vers autres models </button>
-      
-      
-      
-      </div>
+<div className="navigationreponse"> <button onClick={() => {
+                history.push(`/form3`);
+              } }> Vers autres models </button>
+              
+              
+              
+              </div>
 
 
 
@@ -72,7 +70,7 @@ const img5 = "../tarots/" + alea5 + ".jpg" ;
 <div className="test1">
 
 
-<span value="" >  {array} </span>  </div>
+<span value="" >  imulation d'une question posée ?{array} </span>  </div>
 
 
 <div className="test2">
@@ -168,15 +166,13 @@ const img5 = "../tarots/" + alea5 + ".jpg" ;
 
 
 
-<div className="navigation2"> <button onClick={() => {
-        history.push(`/tarots2`);
-      } }> Tirage même question </button>  <button onClick={() => {
-        history.push(`/choix`);
-      } }> Choix d'autres cartes </button>
-      
-      
-      
-      </div> </div>
+      <div className="navigationreponse"><button onClick={() => {
+                history.push(`/tarots2reverse`);
+              } }> Tirage même question </button>  
+              
+              
+              
+              </div> </div>
     );
   }
   
