@@ -17,7 +17,9 @@ function Profile() {
   useEffect(() => {
 
 
-
+    if (!localStorage.getItem("accessToken")) {
+      history.push("/login");
+    }
 
 
     axios

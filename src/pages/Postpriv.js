@@ -14,6 +14,9 @@ function Postpriv() {
   const { authState } = useContext(AuthContext);
 
   useEffect(() => {
+    if (!localStorage.getItem("accessToken")) {
+      history.push("/login");
+    }
     axios
       .get(`https://reves7.herokuapp.com/auth/postpriv/${id}`)
       .then((response) => {

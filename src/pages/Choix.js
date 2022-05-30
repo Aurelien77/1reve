@@ -1,5 +1,5 @@
 
-import React, {} from "react";
+import React, { useEffect } from "react";
 import { useHistory } from "react-router-dom";
 import model from "../logos/animal.jpg"; 
 
@@ -10,6 +10,17 @@ function Choix() {
     // Le Css est choix.scss
 
   let history = useHistory();
+
+
+  useEffect(() => {
+    if (!localStorage.getItem("accessToken")) {
+      history.push("/login");
+    }
+  }, []);
+
+
+
+
     return (
         <div className="choix">
         
