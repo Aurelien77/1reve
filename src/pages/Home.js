@@ -80,7 +80,7 @@ function Home() {
   };
  
 
-
+  const date = new Date(Date.UTC(2020, 11, 20, 3, 23, 16, 738));
 
 
 
@@ -143,7 +143,11 @@ function Home() {
                 <Link to={`/profile/${value.UserId}`}>
                 <span >
                   Créé par  {value.username}</span> <br></br> <span className="date">
-                   {value.createdAt.toString().replace(/T/g, '  ').slice(0, 20)} </span> 
+                  {/*  {value.createdAt.toString().replace(/T/g, '  ').slice(0, 20)}  */}
+                   {new Intl.DateTimeFormat('local').format(value.createAt)}
+                   
+                   
+                   </span> 
                 </Link>
           <div className="ThumbUpAltIcon">
                 <ThumbUpAltIcon

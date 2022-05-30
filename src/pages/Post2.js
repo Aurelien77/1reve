@@ -168,7 +168,7 @@ function Post2() {
           </div>
 
           <div className="footer">
-            {postObject.username}  le  {postObject.createdAt}
+            {postObject.username}  le   {new Intl.DateTimeFormat('local').format(postObject.createAt)}
 
             {(authState.username === postObject.username ||
               authState.admin === true) && (

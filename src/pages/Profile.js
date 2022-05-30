@@ -113,8 +113,7 @@ function Profile() {
                 <div className="textfooter">
              {/*       {value.createdAt.replace('T', ' à ').slice(0, 18)} */}
 
-           Le  {value.createdAt.toString().replace(/T/g, ' à ').slice(0, 21)}
-              
+           Le {new Intl.DateTimeFormat('local').format(value.createAt)}
                 </div>
 
      {/*            <div className="buttons">

@@ -107,8 +107,8 @@ function Postpriv() {
               <div className="footer">
                 <div className="textfooter">
             
-               {/*  Le {value.createdAt.replace('T', ' à ').slice(0, 21)} */}
-            Le {value.createdAt.replace('T', ' à ').slice(0, 21)}
+           
+            Le {new Intl.DateTimeFormat('local').format(value.createAt)}
               
                 </div>
 
