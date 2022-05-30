@@ -42,10 +42,10 @@ function Acuueil() {
                    <div className="presentationtitre">Bienvenue  </div> <br></br>
                   <div className="presentation">  <div className="arriereplanpres">   <span className="transparent">
                     Bonjour à tous,  😊<br></br> 
-                    Ce site à pour vocation de parler des sujet de l'interpretation des rêves  🦢 <br></br> 
+                    Ce site à pour vocation de parler des sujets sur l'interpretation des rêves  🦢 <br></br> 
 
            
-        Il vous permet de vous inscrire et de noter des rêves ainsi que de disposer d'outils d'interpretations, c'est également un site de tirage de cartes <br></br>
+        Il vous permet de disposer d'outils d'interpretations, c'est également un site de tirage de cartes <br></br>
         Pour en savoir plus sur l'utilisation de ce site : <a href="mailto:aurelien.monceau@gmail.com">Contacter l'administrateur</a>
         
        

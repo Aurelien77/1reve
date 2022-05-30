@@ -8,10 +8,11 @@
     @include typo-ecran-ipad-menu_choix;
 font-size: 2rem;
     width: 80%;
-    margin: 5%;
+    margin: 2%;
     padding-bottom: 5%;
   display: flex;
   flex-direction:column;
+
   color: white;
   
   background: no-repeat, url(../logos/nuit.jpg);
@@ -23,6 +24,12 @@ font-size: 2rem;
   dodgerblue -1px -1px 1px,
   dodgerblue 1px -1px 1px; 
 & p {
+  display: flex;
+
+  align-items: center;
+  align-content: center;
+  justify-items: center;
+  justify-content: center;
 background-color: rgb(168, 154, 154);
   margin-top: 2%;
   
@@ -57,9 +64,9 @@ background-color: rgb(168, 154, 154);
     margin-top: 4%;
 
     & .premier{
-      width: 250px;
-      height: 400px;
-      margin: 3%;
+ /*      width: 250px;
+      height: 400px; */
+      margin: 0%;
 
 
       &:hover {
@@ -81,8 +88,8 @@ border: red solid 1px;
 
 
     & .deuxieme{
-      width: 250px;
-      height: 400px;
+   /*    width: 250px;
+      height: 400px; */
       margin: 3%;
       &:hover {
       
@@ -98,19 +105,19 @@ border: red solid 1px;
               }
     }
 
-    & .troisieme{@include img-ecran-large-menu_choix;
-      width: 250px;
-      height: 400px;
-      margin: 3%;
-      width: 15%;
-      @include choix-ecran-ipad;
+    & .troisieme{
+  /*     width: 250px;
+      height: 400px; */
+      margin: 0%;
+      
+/*       @include choix-ecran-ipad; */
       &:hover {
        
         cursor: pointer;
         & img {
          
-          width: 250px;
-          height: 400px;
+        /*   width: 250px;
+          height: 400px; */
           transition: 2s;
           opacity: 0.9;
           box-shadow: 5px 2px 8px rgb(12, 12, 12);
@@ -128,8 +135,8 @@ border: red solid 1px;
    
       
       
-      width: 100%;
-      height: 100%;
+      width: 300px;
+      height: 470px;
       border-radius: 5%;
       box-shadow: 3px 2px 3px rgb(24, 23, 23);
     }

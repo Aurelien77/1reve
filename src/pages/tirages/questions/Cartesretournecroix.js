@@ -73,10 +73,10 @@ let history = useHistory();
 
       <span > 
   
-  <input type="text" className="question" id="question"  name="question" />  
+  <input type="text" className="questiondiferente" id="question"  name="questiondif" />  
         
         
-        <button value="OK" onClick={() => {
+        <button value="OK" onClick={(test) => {
                   history.push(`/anim`);
                 } }> OK </button>
   

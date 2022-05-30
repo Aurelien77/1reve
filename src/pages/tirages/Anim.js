@@ -4,6 +4,18 @@ import { useHistory } from "react-router-dom";
 import EssayForm from "../component/textarea";
 
 import image from "../../logos/dos.jpg"; 
+import {useRef, useEffect} from 'react';
+
+
+
+
+
+
+
+
+
+
+
 
 
 const pst = window.location.search;  
@@ -19,7 +31,7 @@ const pst = window.location.search;
 var array = pst.replace('%3F', ' ? ').replace('%21', '!').replace('%2C', ',').replace('%C3%', '').replace('%27', "'").replace('%C3%AF', 'ï').replace('%C3%AE', 'î').slice("10" ).split('+').join(' ');    
 
 
- /*   var array = document.getElementById("question").value;   */
+  /*  var recupere = document.getElementById('question').value;    */
 /* var expressionReguliere = /[?&]?([^=]+)=([^&]*)/g; */
 
 console.log(pst);
@@ -55,7 +67,7 @@ const img5 = "./animaux/" + alea5 + ".jpg" ;
 
 <div className="navigationreponse"> <button onClick={() => {
                 history.push(`/form`);
-              } }> Vers autres models </button>
+              } }> Vers autres modèles </button>
               
               
               
@@ -68,7 +80,7 @@ const img5 = "./animaux/" + alea5 + ".jpg" ;
 
 
 
-      <span value="" id="spancroix"> Simulation d'une question posée ?{/* {recupere} */}  {array}
+      <span value="" id="spancroix"> Texte de la question par defaut {/* {recupere} */}  {/*  {array} */}
   </span>
 
 <div className="animcroix">

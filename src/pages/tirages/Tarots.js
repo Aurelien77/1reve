@@ -59,7 +59,7 @@ const img5 = "../tarots/" + alea5 + ".jpg" ;
 
 
 
-      <span value="" >Simulation d'une question posée ? {/* {recupere} */}  {array}
+      <span value="" id="spancroix">Simulation d'une question posée ? {/* {recupere} */}  {array}
   </span>
 
 <div className="animcroix">

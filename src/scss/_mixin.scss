@@ -84,28 +84,29 @@ font-size: 1rem;
   }
 
   @mixin ecran-iphone-bouton_en_ligne {
-    @media only screen and (max-width: $smartphone)  {
+    @media only screen and (max-width: $smartphonecroix)  {
   
 width: 100%;
   
   font-size: 1rem;
   
-  
-  
-  
+  margin-top: 8%;
+  margin-left: 2%;
+  margin-right: 2%;
       }
       
     }
   
 
     @mixin ecran-iphone-bouton_en_lignequestion {
-      @media only screen and (max-width: $smartphone)  {
+      @media only screen and (max-width: $smartphonecroix)  {
     
   width: 100%;
-    
+  
     font-size: 1rem;
-    
+   
     & button {
+
 
       width: 100%;
     }
@@ -114,6 +115,23 @@ width: 100%;
         }
         
       }
+
+      @mixin ecran-iphone-bouton_croix {
+        @media only screen and (max-width: $smartphonecroix)  {
+      margin-top: 30%;
+    width: 100%;
+      
+      font-size: 1rem;
+      
+      & button {
+  
+        
+      }
+   
+      
+          }
+          
+        }
     
 //Modification des images smartphones
       @mixin ecran-iphone-modif-taille-images {
@@ -159,35 +177,19 @@ margin-top: 50vw;
     
   }
   
-@mixin ecran-iphone-modif-button-images-croix {
-  @media only screen and (max-width: $smartphone)  {
 
-
-  width: 100%;
-
-
-
-
- 
-
-    }
- 
-
-    
-  }
 
   @mixin ecran-iphone-modif-span-images-croix {
-    @media only screen and (max-width: $smartphone)  {
-  
-position: absolute;
+    @media only screen and (max-width: $smartphonecroix)  {
+      display: flex;
 
+ margin-top: 0%;
+ 
   background-color: #d1515a;
-  display: flex;
-margin-top: 130vw;
-justify-items: center;
-justify-content: center;
-    align-items: center;
-    align-content: center;
+
+  font-size: 0.9rem;
+
+
   
    
   
@@ -220,12 +222,12 @@ justify-content: center;
 
 
 @mixin smartphone-img-croix {
-  @media only screen and (max-width: $smartphone) {
+  @media only screen and (max-width: $smartphonecroix) {
 
 
 
 
-    height: 40vw;
+    height: 50vw;
     width: 32vw;
 
 
@@ -233,6 +235,20 @@ justify-content: center;
 }
 
 
+
+
+
+@mixin smartphone-haut {
+  @media only screen and (max-width: $smartphone) {
+
+
+
+
+    margin-top: 6.5%;
+
+
+  }
+}
 
 
 
@@ -247,7 +263,7 @@ justify-content: center;
 display: flex;
 background-color: #d1515a;
   height:  36vw;
-  width: 50%;
+  width: 40%;
  
 
     }
@@ -331,7 +347,25 @@ background-color: #d1515a;
   
     } 
 // Toutes les propriétées écrans larges
+@mixin ajust-login-ecran-smartphone {
+  @media only screen and (max-width: $smartphone)   {
+    width: 90%;
 
+    }
+    
+
+
+  } 
+
+  @mixin ajust-login-ecran-ipad {
+    @media only screen and (max-width: $ipadmin)  {
+      width: 90%;
+  
+      }
+      
+  
+  
+    } 
 
   @mixin bouton-ecran-large {
     @media only screen and (min-width: $ecranlarge)  {
@@ -372,25 +406,7 @@ font-size: 30px;
 
 
 
-    @mixin img-ecran-large-menu_choix {
-      @media only screen and (min-width: $ecranlarge)  {
-
-
-  
-        width: 250px;
-        height: 400px;
-          border-radius: 5%;
-          box-shadow: 3px 2px 3px rgb(24, 23, 23);
-      
-
-
  
-  
-        }
-        
-    
-    
-      } 
 
       @mixin img-ecran-large-menu_choix_bougie {
         @media only screen and (min-width: $ecranlarge)  {
@@ -451,37 +467,6 @@ font-size: 30px;
   } 
 
 
-
-@mixin choix-ecran-ipad {
-  @media only screen and (max-width: $ipadmaxcarte) and (min-width: $ipadmincarte)   {
-
-
-
-   
-   
-
-     
-   
-     
-      
-     
-    
-     
-          
-       
-         
-        width: 250px;
-        height: 400px;
-        border-radius: 5%;
-        box-shadow: 3px 2px 3px rgb(24, 23, 23);
-     
-    
-      
-    
-    }
-  }
-
-  
  
 
 
@@ -513,10 +498,21 @@ font-size: 30px;
 
 
 // partie iphone 
+@mixin span-reponse {
+  @media only screen and (max-width: $ipadmin)  {
 
+margin-bottom: 1%;
+
+
+
+  }
+
+
+
+}
 
 @mixin ecran-iphone-menu_choix {
-  @media only screen and (max-width: $smartphone)  {
+  @media only screen and (max-width: $smartphonechoix)  {
 
 display: flex;
 flex-direction: column;
