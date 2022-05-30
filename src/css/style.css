@@ -56,6 +56,30 @@ h1 {
   color: white;
 }
 
+/* @mixin barre-de-navigation-smartphone {
+  @media only screen and (max-width: $ipadmin) and (min-width: $ipadmax) {  
+
+font-size: 1rem;;
+
+
+
+    }
+
+
+
+} */
+/* @mixin barre-de-navigation-smartphone {
+  @media only screen and (max-width: $ipadmin) and (min-width: $ipadmax) {  
+
+font-size: 1rem;;
+
+
+
+    }
+
+
+
+} */
 #spancroix {
   margin-bottom: 8%;
 }
@@ -610,6 +634,18 @@ h1 {
   background-color: #aacfe7;
 }
 
+/* @mixin barre-de-navigation-smartphone {
+  @media only screen and (max-width: $ipadmin) and (min-width: $ipadmax) {  
+
+font-size: 1rem;;
+
+
+
+    }
+
+
+
+} */
 .choix {
   font-size: 2rem;
   width: 80%;
@@ -1136,6 +1172,7 @@ span:nth-child(5) {
    } */
 }
 .ajust .barredenavigation {
+  /*  @include barre-de-navigation-smartphone;  */
   margin-left: 10%;
   margin-right: 10%;
   width: 100%;

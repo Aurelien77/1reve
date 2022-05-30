@@ -28,13 +28,13 @@ function Post2() {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:3001/postspriv/byId2/${id}`)
+      .get(`https://reves7.herokuapp.com/postspriv/byId2/${id}`)
       .then((response) => {
         setPostObject(response.data);           /*  Set l'authState avec un post choisit par ID */
       });
 
     axios
-      .get(`http://localhost:3001/comments2/${id}`)
+      .get(`https://reves7.herokuapp.com/comments2/${id}`)
       .then((response) => {
         setComments(response.data);
       });
@@ -43,7 +43,7 @@ function Post2() {
   const addComment = () => {
     axios
       .post(
-        "http://localhost:3001/comments2",
+        "https://reves7.herokuapp.com/comments2",
         {
           commentBody: newComment,
           Posts2Id: id,
@@ -70,7 +70,7 @@ function Post2() {
 
   const deleteComment = (id) => {
     axios
-      .delete(`http://localhost:3001/comments2/${id}`, {
+      .delete(`https://reves7.herokuapp.com/comments2/${id}`, {
         headers: { accessToken: localStorage.getItem("accessToken") },
       })
       .then(() => {
@@ -84,7 +84,7 @@ function Post2() {
 
   const deletePost = (id) => {
     axios
-      .delete(`http://localhost:3001/postspriv/${id}`, {
+      .delete(`https://reves7.herokuapp.com/postspriv/${id}`, {
         headers: { accessToken: localStorage.getItem("accessToken") },
       })
       .then(() => {
@@ -99,7 +99,7 @@ function Post2() {
         return;
     }
       axios.put(
-        "http://localhost:3001/postspriv/title",
+        "https://reves7.herokuapp.com/postspriv/title",
         {
           newTitle: newTitle,
           id: id,
@@ -116,7 +116,7 @@ function Post2() {
         return;
     }
       axios.put(
-        "http://localhost:3001/postspriv/postText",
+        "https://reves7.herokuapp.com/postspriv/postText",
         {
           newText: newPostText,
           id: id,

@@ -157,7 +157,7 @@ function App() {
 
   return (
     <div className="ajust">
-      <AuthContext.Provider value={{authState, setAuthState }}>
+      <AuthContext.Provider value={{authState, setAuthState }} >
         <Router>
           
         
