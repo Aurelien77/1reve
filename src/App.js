@@ -154,7 +154,7 @@ function App() {
     
     localStorage.removeItem("accessToken");
     setAuthState({ /* email: "", */ username: "", prof: "", id: 0, status: false });
-    window.location.reload();
+   
   
   
   };
