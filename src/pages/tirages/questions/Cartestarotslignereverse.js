@@ -1,5 +1,5 @@
 
-import React, {} from "react";
+import React, { useEffect } from "react";
 import { useHistory } from "react-router-dom";
 
 import image from "../../../logos/dos3.jpg"; 
@@ -33,7 +33,11 @@ function Cartestarotslignereverse() {
     let history = useHistory();
 
  
-
+    useEffect(() => {
+      if (!localStorage.getItem("accessToken")) {
+        history.push("/login");
+      }
+    }, []);
 
 
     return (

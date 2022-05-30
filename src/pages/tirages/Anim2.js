@@ -1,7 +1,7 @@
 
-import React, {} from "react";
+import React, { useEffect } from "react";
 import { useHistory } from "react-router-dom";
-import EssayForm from "../component/textarea";
+
 
 import image from "../../logos/dos.jpg"; 
 
@@ -46,6 +46,11 @@ const img4 = "./animaux/" + alea4 + ".jpg" ;
 const img5 = "./animaux/" + alea5 + ".jpg" ;    
 
 
+useEffect(() => {
+  if (!localStorage.getItem("accessToken")) {
+    history.push("/login");
+  }
+}, []);
 
     return (
      

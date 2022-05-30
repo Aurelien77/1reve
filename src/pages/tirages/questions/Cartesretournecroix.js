@@ -2,7 +2,7 @@
 
 import image from "../../../logos/dos.jpg"; 
 import { useHistory } from "react-router-dom";
-import React, { useState } from "react";
+import React, { useEffect } from "react";
 
 
 const pst = window.location.search;  
@@ -46,7 +46,11 @@ function Cartesretournecroix() {
 
 let history = useHistory();
 
- 
+useEffect(() => {
+  if (!localStorage.getItem("accessToken")) {
+    history.push("/login");
+  }
+}, []);
 
     return (
      

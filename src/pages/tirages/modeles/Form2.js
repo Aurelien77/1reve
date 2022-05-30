@@ -1,5 +1,5 @@
 
-import React, {} from "react";
+import React, { useEffect } from "react";
 import { useHistory } from "react-router-dom";
 import bougie from "../../../logos/bougie.gif"; 
 import croix from "../../../logos/croix.jpg"; 
@@ -7,7 +7,11 @@ import ligne from "../../../logos/ligne.jpg";
 function Formquestion2() {
     
   let history = useHistory();
-
+  useEffect(() => {
+    if (!localStorage.getItem("accessToken")) {
+      history.push("/login");
+    }
+  }, []);
     return (
   
 

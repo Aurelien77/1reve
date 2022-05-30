@@ -2,7 +2,7 @@
 
 import image from "../../../logos/dos2.jpg"; 
 import { useHistory } from "react-router-dom";
-import React, { useState } from "react";
+import React, { useEffect } from "react";
 
 
 const pst = window.location.search;  
@@ -45,8 +45,12 @@ function Cartestiragecroix() {
 }); */
 
 let history = useHistory();
+useEffect(() => {
+  if (!localStorage.getItem("accessToken")) {
+    history.push("/login");
+  }
+}, []);
 
- 
 
     return (
      

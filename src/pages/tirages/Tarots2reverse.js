@@ -1,5 +1,5 @@
 
-import React, {} from "react";
+import React, { useEffect } from "react";
 import { useHistory } from "react-router-dom";
 import image from "../../logos/dos3.jpg"; 
 const pst2 = window.location.search;  
@@ -38,7 +38,11 @@ const img4 = "../tarots/" + alea4 + ".jpg" ;
 const img5 = "../tarots/" + alea5 + ".jpg" ;    
   
 
-
+useEffect(() => {
+  if (!localStorage.getItem("accessToken")) {
+    history.push("/login");
+  }
+}, []);
 
     return (
      

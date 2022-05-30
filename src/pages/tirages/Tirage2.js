@@ -1,5 +1,5 @@
 
-import React, {} from "react";
+import React, { useEffect } from "react";
 import { useHistory } from "react-router-dom";
 
 import image from "../../logos/dos2.jpg"; 
@@ -38,8 +38,11 @@ const img3 = "./oracle/" + alea3 + ".jpg" ;
 const img4 = "./oracle/" + alea4 + ".jpg" ;    
 const img5 = "./oracle/" + alea5 + ".jpg" ;    
 
-
-
+useEffect(() => {
+  if (!localStorage.getItem("accessToken")) {
+    history.push("/login");
+  }
+}, []);
     return (
      
       <div  className="background">

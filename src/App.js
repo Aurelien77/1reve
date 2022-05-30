@@ -149,12 +149,16 @@ function App() {
         }
       });
   }, [] );
-
+ 
   const logout = () => {
+    
     localStorage.removeItem("accessToken");
     setAuthState({ /* email: "", */ username: "", prof: "", id: 0, status: false });
+    window.location.reload();
+  
+  
   };
-
+ 
   return (
     <div className="ajust">
       <AuthContext.Provider value={{authState, setAuthState }} >

@@ -1,5 +1,5 @@
 
-import React, {} from "react";
+import React, { useEffect } from "react";
 import { useHistory } from "react-router-dom";
 
 import image from "../../../logos/dos2.jpg"; 
@@ -33,7 +33,12 @@ function Cartestirageligne() {
     let history = useHistory();
 
  
-
+    useEffect(() => {
+      if (!localStorage.getItem("accessToken")) {
+        history.push("/login");
+      }
+    }, []);
+    
 
 
     return (
