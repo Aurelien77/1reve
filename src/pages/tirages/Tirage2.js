@@ -70,7 +70,7 @@ useEffect(() => {
    
    <img
        src={image}
-       alt="Carte"
+       alt=""
      />
 
 
@@ -80,37 +80,37 @@ useEffect(() => {
 
      <img
        src={image}
-       alt="Carte"
+       alt=""
      />
 
 
      <img
        src={image}
-       alt="Carte"
+       alt=""
      />
-
-
-
-
-     <img
-       src={image}
-       alt="Carte"
-     />
-
 
 
 
 
      <img
        src={image}
-       alt="Carte"
+       alt=""
+     />
+
+
+
+
+
+     <img
+       src={image}
+       alt=""
      />   
    
    </div>
    <div className="anim2">
 <img
        src={img}
-       alt="Carte"
+       alt=""
      />
 
 
@@ -120,13 +120,13 @@ useEffect(() => {
 
      <img
        src={img2}
-       alt="Carte"
+       alt=""
      />
 
 
      <img
        src={img3}
-       alt="Carte"
+       alt=""
      />
 
 
@@ -134,7 +134,7 @@ useEffect(() => {
 
      <img
        src={img4}
-       alt="Carte"
+       alt=""
      />
 
 
@@ -143,7 +143,7 @@ useEffect(() => {
 
      <img
        src={img5}
-       alt="Carte"
+       alt=""
      />   
    </div>
      

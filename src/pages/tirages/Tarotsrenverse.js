@@ -58,7 +58,7 @@ useEffect(() => {
     
 <img
           src={img}
-          alt="Carte"
+          alt=""
         />
 
 </div>
@@ -68,14 +68,14 @@ useEffect(() => {
 
         <img
           src={img2}
-          alt="Carte"
+          alt=""
         />
 
 
 
         <img
           src={img3}
-          alt="Carte"
+          alt=""
         />
 
 
@@ -83,7 +83,7 @@ useEffect(() => {
 
         <img
           src={img4}
-          alt="Carte"
+          alt=""
         />
 
 </div>
@@ -92,7 +92,7 @@ useEffect(() => {
 
         <img
           src={img5}
-          alt="Carte"
+          alt=""
         />   
        </div>
         
@@ -104,7 +104,7 @@ useEffect(() => {
     
 <img
           src={image}
-          alt="Carte"
+          alt=""
         />
 
 </div>
@@ -114,14 +114,14 @@ useEffect(() => {
 
         <img
           src={image}
-          alt="Carte"
+          alt=""
         />
 
 
 
         <img
           src={image}
-          alt="Carte"
+          alt=""
         />
 
 
@@ -129,7 +129,7 @@ useEffect(() => {
 
         <img
           src={image}
-          alt="Carte"
+          alt=""
         />
 
 </div>
@@ -138,7 +138,7 @@ useEffect(() => {
 
         <img
           src={image}
-          alt="Carte"
+          alt=""
         />   
        </div>
         

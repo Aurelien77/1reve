@@ -14,7 +14,7 @@ class FlavorForm extends React.Component {
     
     constructor(props) {
       super(props);
-      this.state = {value: '        ? '};
+      this.state = {value: '?'};
       this.handleChange = this.handleChange.bind(this);
       this.handleSubmit = this.handleSubmit.bind(this);
 
@@ -46,7 +46,7 @@ class FlavorForm extends React.Component {
        
    
        
-        <form onSubmit={this.handleSubmit} ><div className="formulaire">
+        <form  ><div className="formulaire">
         <div>
             <input value={this.state.value} onChange={this.handleChange}>           
              
