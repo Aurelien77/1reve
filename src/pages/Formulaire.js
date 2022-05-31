@@ -31,7 +31,7 @@ class FlavorForm extends React.Component {
       
      /*  props.history.push('/anim'); */
    /*    window.location.href='/anim';    */
-   /* window.location.replace("/anim"); */
+  
    
     /* action="/"; */
     /* 
@@ -46,7 +46,7 @@ class FlavorForm extends React.Component {
        
    
        
-        <form /* onSubmit={this.handleSubmit} */ ><div className="formulaire">
+        <form onSubmit={this.handleSubmit} ><div className="formulaire">
         <div>
             <input value={this.state.value} onChange={this.handleChange}>           
              

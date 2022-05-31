@@ -12,14 +12,14 @@ import image from "../../logos/dos.jpg";
 
 
 
-var recupere = localStorage.getItem('Maquestion');
 
 
 
 
 
 
-const pst = window.location.search;  
+
+/* const pst = window.location.search;   */
 
 /* const reg= new RegExp("[ ,;]+", "g","?"); */
 
@@ -42,10 +42,11 @@ const pst = window.location.search;
      
 /* var expressionReguliere = /[?&]?([^=]+)=([^&]*)/g; */
 
-console.log(pst);
+/* console.log(pst); */
+
 function Anim() {
   
-
+  var recupere = localStorage.getItem('Maquestion');
 
     const alea =  Math.floor((Math.random() * 78)); // Retourne un numéro de carte au hasard
 

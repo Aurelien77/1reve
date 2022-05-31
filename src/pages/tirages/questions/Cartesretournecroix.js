@@ -45,9 +45,9 @@ useEffect(() => {
 
       <span > 
   
-      <FlavorForm /><button value="OK" onClick={() => {
+      <FlavorForm /> <button value="OK" onClick={() => {
                   history.push(`/anim`);
-                } }/> 
+                } }> OK </button> 
 
      {/*  {console.log("TEST cest un tEST ")} */}
   {/* <form action="/anim" className="flexrow">
