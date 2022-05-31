@@ -4,46 +4,14 @@ import image from "../../../logos/dos.jpg";
 import { useHistory } from "react-router-dom";
 import React, { useEffect } from "react";
 
+import FlavorForm from "../../Formulaire";
+/* const pst = window.location.search;  
 
-const pst = window.location.search;  
-/* const reg= new RegExp("[ ,;]+", "g","?"); */
-
-
-/* var array = pst.split("", 3);  */
-
-/* var array = pst.replace('%3F', ' ? ').replace('+', '').slice(21, ).split('+').join(' '); */
-
-
-/* var array = pst.replace('%3F', ' ? ').replace('%21', '!').replace('%2C', ',').replace('%27', "'").replace('%C3%AF', 'ï').replace('%C3%AE', 'î').slice("5" ).split('+').join(' '); */
-
-
-/* var expressionReguliere = /[?&]?([^=]+)=([^&]*)/g; */
-
-console.log(pst);
+console.log(pst); */
 
 function Cartesretournecroix() {
 
  
-
- /*  const [question, setQuestion] = useState(""); */
- /*    const alea =  Math.floor((Math.random() * 409) + 1); // Retourne un numéro de carte au hasard
-
-    const alea2 =  Math.floor((Math.random() * 409) + 1);
-
-    const alea3 =  Math.floor((Math.random() * 409) + 1);
-
-    const alea4 =  Math.floor((Math.random() * 409) + 1);
-
-    const alea5 =  Math.floor((Math.random() * 409) + 1);
-
-    
-*/
-/* setQuestion({
-  question : question,
-
-  status: true,
-}); */
-
 let history = useHistory();
 
 useEffect(() => {
@@ -77,14 +45,8 @@ useEffect(() => {
 
       <span > 
   
-  <input type="text" className="questiondiferente" id="question"  name="questiondif" />  
-        
-        
-        <button value="OK" onClick={(test) => {
-                  history.push(`/anim`);
-                } }> OK </button>
-  
-  
+      <FlavorForm />
+     {/*  {console.log("TEST cest un tEST ")} */}
   {/* <form action="/anim" className="flexrow">
    
   

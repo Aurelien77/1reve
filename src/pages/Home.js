@@ -80,7 +80,6 @@ function Home() {
   };
  
 
-  const date = new Date(Date.UTC(2020, 11, 20, 3, 23, 16, 738));
 
 
 

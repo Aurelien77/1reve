@@ -12,6 +12,7 @@ import image from "../../logos/dos.jpg";
 
 
 
+var recupere = localStorage.getItem('Maquestion');
 
 
 
@@ -28,18 +29,24 @@ const pst = window.location.search;
 /* var array = pst.replace('%3F', ' ? ').replace('+', '').slice(21, ).split('+').join(' '); */
 
 
-var array = pst.replace('%3F', ' ? ').replace('%21', '!').replace('%2C', ',').replace('%C3%', '').replace('%27', "'").replace('%C3%AF', 'ï').replace('%C3%AE', 'î').slice("10" ).split('+').join(' ');    
+/* var array = pst.replace('%3F', ' ? ').replace('%21', '!').replace('%2C', ',').replace('%C3%', '').replace('%27', "'").replace('%C3%AF', 'ï').replace('%C3%AE', 'î').slice("10" ).split('+').join(' ');   */
+
+/* var recupere= document.getElementById('question'); */
 
 
-  /*  var recupere = document.getElementById('question').value;    */
+/* var recupere = document.getElementById('#question').value;  */ 
+/* if (recupere == null){
+  var recupere2 = document.getElementById('#question').value; 
+  
+} */
+     
 /* var expressionReguliere = /[?&]?([^=]+)=([^&]*)/g; */
 
 console.log(pst);
 function Anim() {
   
 
-/*   console.log("authState");
-  console.log(authState); */
+
     const alea =  Math.floor((Math.random() * 78)); // Retourne un numéro de carte au hasard
 
     const alea2 =  Math.floor((Math.random() * 78));
@@ -84,7 +91,7 @@ useEffect(() => {
 
 
 
-      <span value="" id="spancroix"> Texte de la question par defaut {/* {recupere} */}  {/*  {array} */}
+      <span value="" id="spancroix"> {recupere}  {/*  {array} */}
   </span>
 
 <div className="animcroix">
@@ -183,9 +190,9 @@ useEffect(() => {
       </div>
       
       </div>
-      
-      
-      
+     {/*  {console.log("state.value")}
+      {console.log(authState.username)} */}
+       
       <div className="navigationreponse"><button onClick={() => {
                 history.push(`/anim`);
               } }> Tirage même question </button>  

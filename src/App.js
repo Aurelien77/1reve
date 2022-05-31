@@ -21,6 +21,7 @@ import Delete from "./pages/Delete";
 import Accueil from "./pages/Accueil";
 import Recherche from "./pages/Recherche";
 import Postpriv from "./pages/Postpriv";
+import FlavorForm from "./pages/Formulaire";
 
 //Partie tirage 
 
@@ -108,12 +109,11 @@ import EssayForm from "./pages/component/textarea";
 import { AuthContext } from "./helpers/AuthContext";
 import { useState, useEffect } from "react";
 import axios from "axios";
-import { Form } from "formik";
 
 
 
 
-function App() {
+function App() {  
   const [authState, setAuthState] = useState({
     username: "",
   /*   email: "", */
@@ -152,10 +152,11 @@ function App() {
  
   const logout = () => {
     
+   
     localStorage.removeItem("accessToken");
     setAuthState({ /* email: "", */ username: "", prof: "", id: 0, status: false });
+    window.location.href = "/login";
    
-  
   
   };
  
@@ -165,31 +166,7 @@ function App() {
         <Router>
           
         
-              {/*     <h1>
-                <Link to={`/profile/${authState.id}`}>
-                  {authState.username}
-                </Link>
-              </h1> */}
-           
-             
             
-            
-            {/*         <div className="principal">
-
-            {(authState.username === username || authState.admin === true) && (
-          <>
-            <button
-              onClick={() => {
-                history.push("#");
-              }}
-            >
-              {" "}
-              Changer mon mots de passe
-            </button>
-
-          </>
-        )}
-      </div> */}
          
               <div className="barredenavigation">  
               
@@ -271,19 +248,10 @@ function App() {
                 )}
            </li>
               </ul>  
-        {/*     <div className="deco">
-              {authState.status && (
-                <button onClick={logout}>⚪Déconnexion</button>
-              )}
-            </div>  
-             */}
+      
             </div>
 
 
-            {console.log("console log de authState")}
-{console.log(authState)}
-{console.log("console log de authState.status")}
-{console.log(authState.status)}
 
 
             {!authState.status && (
@@ -401,7 +369,7 @@ function App() {
 
 
 
-
+<Route path="/FlavorForm" exact component={FlavorForm} />
 
             <Route path="/profile/:id" exact component={Profile} />
             <Route path="/createpost" exact component={CreatePost} />
