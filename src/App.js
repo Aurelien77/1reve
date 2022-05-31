@@ -4,7 +4,7 @@
 
 
 
-import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch, Link} from "react-router-dom";
 
 import Home from "./pages/Home";
 import Priv from "./pages/Priv";
@@ -151,11 +151,14 @@ function App() {
   }, [] );
  
   const logout = () => {
-    
+   
    
     localStorage.removeItem("accessToken");
+    
+    
     setAuthState({ /* email: "", */ username: "", prof: "", id: 0, status: false });
-    window.location.href = "/login";
+  
+  
    
   
   };
