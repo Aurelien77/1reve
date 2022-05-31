@@ -51,7 +51,7 @@ class FlavorForm extends React.Component {
             </div>
           {console.log("this.handleSubmit")}
           {console.log(this.state)}
-          <button value="OK" type="submit"  > OK </button> 
+          <input value="OK" type="submit" onclick="/anim" />
           </div> </form>
       );
     }
