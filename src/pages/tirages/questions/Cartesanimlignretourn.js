@@ -1,33 +1,19 @@
 
 import React, { useEffect } from "react";
 import { useHistory } from "react-router-dom";
-
+import FlavorForm from "../../Formulaire";
 import image from "../../../logos/dos.jpg"; 
 
 
 
 const pst = window.location.search;  
 
-/* const reg= new RegExp("[ ,;]+", "g","?"); */
 
-
-/* var array = pst.split("", 3);  */
-
-/* var array = pst.replace('%3F', ' ? ').replace('+', '').slice(21, ).split('+').join(' '); */
-
-
-var array = pst.replace('%3F', ' ? ').replace('%21', '!').replace('%2C', ',').replace('%C3%', '').replace('%27', "'").replace('%C3%AF', 'ï').replace('%C3%AE', 'î').slice("10" ).split('+').join(' '); 
-
-
-/*   var recupere = document.getElementsByName('question').value;  */
-/* var expressionReguliere = /[?&]?([^=]+)=([^&]*)/g; */
 
 console.log(pst);
 function Cartesanimlignretourn() {
   
 
-/*   console.log("authState");
-  console.log(authState); */
    
 
     let history = useHistory();
@@ -48,7 +34,14 @@ function Cartesanimlignretourn() {
 
               
              
-<div className="navigationquestion">   <button onClick={() => {
+<div className="navigationquestion">  
+
+
+
+
+
+
+ <button onClick={() => {
                 history.push(`/form`);
               } }> Vers autres models </button>
               
@@ -72,25 +65,11 @@ function Cartesanimlignretourn() {
        <div className="test1">
  
  
-       <span > 
-       <input type="text" className="question" id="question"  name="question" />  <button value="OK" onClick={() => {
+       <span > <FlavorForm />
+        <button value="OK" onClick={() => {
                 history.push(`/anim3`);
               } }> OK </button>
-  {/*  <form action="/anim3" className="flexrow">
-    
-   
-           <fieldset>
-        
-         
-             <input type="text" name="question"  />
-         
-          
-           
-   
-           </fieldset>   
-           <button type="submit" value="OK" id="question">OK</button>
-          
-         </form>  */}
+ 
          
          </span>        </div>
  

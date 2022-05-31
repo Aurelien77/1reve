@@ -3,11 +3,8 @@
 import image from "../../../logos/dos.jpg"; 
 import { useHistory } from "react-router-dom";
 import React, { useEffect } from "react";
-
 import FlavorForm from "../../Formulaire";
-/* const pst = window.location.search;  
 
-console.log(pst); */
 
 function Cartesretournecroix() {
 
@@ -49,31 +46,9 @@ useEffect(() => {
                   history.push(`/anim`);
                 } }> OK </button> 
 
-     {/*  {console.log("TEST cest un tEST ")} */}
-  {/* <form action="/anim" className="flexrow">
-   
-  
-          <fieldset>
-  
-        
-            <input type="text" name="question" />
-        
-         
-          
-  
-          </fieldset>   
-          <button type="submit" value="OK" id="question">OK</button>
-         
-        </form> 
-         */}
-  
-  
-  
-  
-  
         </span> 
 
-{/*  <EssayForm value="question" name="question" id="question" />  */}
+
   
 <div className="haut">
 <div className="grid-item">

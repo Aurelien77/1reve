@@ -1,33 +1,20 @@
 
 import React, { useEffect } from "react";
 import { useHistory } from "react-router-dom";
-
+import FlavorForm from "../../Formulaire";
 import image from "../../../logos/dos2.jpg"; 
 
 
 
 const pst = window.location.search;  
 
-/* const reg= new RegExp("[ ,;]+", "g","?"); */
 
-
-/* var array = pst.split("", 3);  */
-
-/* var array = pst.replace('%3F', ' ? ').replace('+', '').slice(21, ).split('+').join(' '); */
-
-
-/* var array = pst.replace('%3F', ' ? ').replace('%21', '!').replace('%2C', ',').replace('%C3%', '').replace('%27', "'").replace('%C3%AF', 'ï').replace('%C3%AE', 'î').slice("10" ).split('+').join(' ');  */
-
-
-/*   var recupere = document.getElementsByName('question').value;  */
-/* var expressionReguliere = /[?&]?([^=]+)=([^&]*)/g; */
 
 console.log(pst);
 function Cartestirageligne() {
   
 
-/*   console.log("authState");
-  console.log(authState); */
+
    
 
     let history = useHistory();
@@ -71,25 +58,11 @@ function Cartestirageligne() {
        <div className="test1">
  
  
-       <span >  <input type="text" className="question" id="question"  name="question" />  
+       <span >  <FlavorForm />
        <button value="OK" onClick={() => {
                 history.push(`/tirage2`);
               } }> OK </button>
- {/*   <form action="/tirage2" className="flexrow">
-    
-   
-           <fieldset>
-      
-         
-             <input type="text" name="question"  />
-         
-          
-           
-   
-           </fieldset>   
-           <button type="submit" value="OK" id="question">OK</button>
-          
-         </form>  */}
+
          
          </span>        </div>
  

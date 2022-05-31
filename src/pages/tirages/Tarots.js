@@ -1,26 +1,14 @@
 
 import React, { useEffect } from "react";
 import { useHistory } from "react-router-dom";
-
 import image from "../../logos/dos3.jpg"; 
 
 
-const pst = window.location.search;  
-/* const reg= new RegExp("[ ,;]+", "g","?"); */
 
 
-/* var array = pst.split("", 3);  */
-
-/* var array = pst.replace('%3F', ' ? ').replace('+', '').slice(21, ).split('+').join(' '); */
-
-
-var array = pst.replace('%3F', ' ? ').replace('%21', '!').replace('%2C', ',').replace('%27', "'").replace('%C3%AF', 'ï').replace('%C3%AE', 'î').slice("10" ).split('+').join(' ');
-
-
-/* var expressionReguliere = /[?&]?([^=]+)=([^&]*)/g; */
-
-console.log(pst);
 function Tarots() {
+  var recupere = localStorage.getItem('Maquestion');
+
   const alea =  Math.floor((Math.random() * 76) + 1); // Retourne un numéro de carte au hasard
 
   const alea2 =  Math.floor((Math.random() * 76) + 1);
@@ -63,7 +51,7 @@ useEffect(() => {
 
 
 
-      <span value="" id="spancroix">Simulation d'une question posée ? {/* {recupere} */}  {array}
+      <span value="" id="spancroix">{recupere} 
   </span>
 
 <div className="animcroix">

@@ -3,7 +3,7 @@
 import image from "../../../logos/dos3.jpg";  
 import { useHistory } from "react-router-dom";
 import React, { useEffect } from "react";
-
+import FlavorForm from "../../Formulaire";
 
 const pst = window.location.search;  
 
@@ -49,7 +49,7 @@ useEffect(() => {
 
 <span > 
 
-  <input type="text" className="question" id="question"  name="question" />  
+<FlavorForm />
         
         
         <button value="OK" onClick={() => {

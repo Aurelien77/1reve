@@ -3,21 +3,10 @@
 import image from "../../../logos/dos3.jpg"; 
 import { useHistory } from "react-router-dom";
 import React, { useEffect } from "react";
-
+import FlavorForm from "../../Formulaire";
 
 const pst = window.location.search;  
-/* const reg= new RegExp("[ ,;]+", "g","?"); */
 
-
-/* var array = pst.split("", 3);  */
-
-/* var array = pst.replace('%3F', ' ? ').replace('+', '').slice(21, ).split('+').join(' '); */
-
-
-/* var array = pst.replace('%3F', ' ? ').replace('%21', '!').replace('%2C', ',').replace('%27', "'").replace('%C3%AF', 'ï').replace('%C3%AE', 'î').slice("5" ).split('+').join(' '); */
-
-
-/* var expressionReguliere = /[?&]?([^=]+)=([^&]*)/g; */
 
 console.log(pst);
 
@@ -25,24 +14,6 @@ function Cartestarotscroix() {
 
  
 
- /*  const [question, setQuestion] = useState(""); */
- /*    const alea =  Math.floor((Math.random() * 409) + 1); // Retourne un numéro de carte au hasard
-
-    const alea2 =  Math.floor((Math.random() * 409) + 1);
-
-    const alea3 =  Math.floor((Math.random() * 409) + 1);
-
-    const alea4 =  Math.floor((Math.random() * 409) + 1);
-
-    const alea5 =  Math.floor((Math.random() * 409) + 1);
-
-    
-*/
-/* setQuestion({
-  question : question,
-
-  status: true,
-}); */
 
 let history = useHistory();
 
@@ -74,28 +45,15 @@ useEffect(() => {
 
 
 
-{/*  <EssayForm value="question" name="question" id="question" />  */}
+
 <span > 
-<input type="text" className="question" id="question"  name="question" />  
-        
+
+<FlavorForm />
         
         <button value="OK" onClick={() => {
                   history.push(`/tarots`);
                 } }> OK </button>
-{/* <form action="/tarots" className="flexrow">
- 
 
-        <fieldset>
-     
-          <input type="text" name="question" />
-      
-       
-        
-
-        </fieldset>   
-        <button type="submit" value="OK" id="question">OK</button>
-       
-      </form>  */}
       
       </span>   
 <div className="haut">
