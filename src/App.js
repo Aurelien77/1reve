@@ -167,7 +167,7 @@ function App() {
     localStorage.removeItem("accessToken");
     
     
-    setAuthState({ /* email: "", */ username: "", prof: "", id: 0, status: false });
+    setAuthState({ /* email: "", */ username: "", prof: "", id: 0,photo_profil: "", status: false });
   
     
   
