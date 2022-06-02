@@ -980,6 +980,16 @@ span:nth-child(5) {
   visibility: hidden;
 }
 
+.apparitionbarrecontexte img {
+  height: 70px;
+  margin: 1%;
+  border-radius: 20%;
+  border: solid rgb(40, 10, 188) 1px;
+}
+.apparitionbarrecontexte img:hover {
+  border: solid red 1px;
+}
+
 .profil img {
   height: 300px;
   width: 250px;

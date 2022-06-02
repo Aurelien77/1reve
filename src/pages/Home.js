@@ -11,7 +11,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 function Home() {
   const [listOfPosts, setListOfPosts] = useState([]);
   const [likedPosts, setLikedPosts] = useState([]);
-
+  const [photo_profil, setphoto_profil] = useState([]);
 
   let history = useHistory();
 
@@ -19,13 +19,14 @@ function Home() {
     if (!localStorage.getItem("accessToken")) {
       history.push("/login");
     } else {
+      
       axios
         .get("https://reves7.herokuapp.com/posts", {
           headers: { accessToken: localStorage.getItem("accessToken") },
         })
         .then((response) => {
+         
           setListOfPosts(response.data.listOfPosts);
-       
         
           setLikedPosts(
             response.data.likedPosts.map((like) => {
@@ -130,7 +131,12 @@ function Home() {
               <div className="atarget">
               <a target="blank" href={value.lien}>
                 {value.lien}
-              </a> </div>
+              </a>
+              
+              <img
+          src={"https://reves7.herokuapp.com/images/" + photo_profil}
+          alt="profil"
+        /> </div>
             <div>
          
            </div> </div> 

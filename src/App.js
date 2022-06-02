@@ -115,12 +115,18 @@ import axios from "axios";
 
 function App() {  
 
+//ajout ppur photopro
+  const [photo_profil, setphoto_profil] = useState("");
+
+//....
+
+
   
   const [authState, setAuthState] = useState({
     username: "",
   /*   email: "", */
     id: 0,
-    photo_profil: "",
+   /*  photo_profil: "", */
     prof: "",
     status: false,
   });
@@ -140,6 +146,9 @@ function App() {
 
 
         } else {
+//ajout photopro
+          setphoto_profil(response.data.photo_profil);
+          //.....
           setAuthState({
             username: response.data.username,
             id: response.data.id,
@@ -188,23 +197,43 @@ function App() {
 
 
 <li id="username" className="username">   {!authState.prof && authState.username && (
-
+  <>
+<img
+          src={"https://reves7.herokuapp.com/images/" + photo_profil}
+          alt=""
+        />
 
 
                   <Link to={`/postpriv/${authState.id}`}> 🪴
                     {authState.username}
                   </Link>
 
-
+                  </>
 
 
                 )}
                 
                 
                 {authState.prof && (
+
+<>
+
+<img
+src={"https://reves7.herokuapp.com/images/" + photo_profil}
+alt=""
+/>
+
+
+
+
                   <Link to={`/profile/${authState.id}`}>🪴
                     {authState.username}
                   </Link>
+
+
+                  </>
+
+
                 )}
                 
                 
@@ -255,6 +284,8 @@ function App() {
       
             </div>
 
+            {console.log("console log de authState")}
+{console.log(authState)}
 
 
 

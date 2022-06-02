@@ -8,6 +8,7 @@ function Login() {
   const [username, setUsername] = useState("");
   /* const [email, setemail] = useState(""); */
   const [password, setPassword] = useState("");
+
   const { setAuthState } = useContext(AuthContext);
 
   let history = useHistory();
@@ -24,6 +25,7 @@ function Login() {
           setAuthState({
             username: response.data.username,
             /*   email: response.data.email, */
+            photo_profil: response.data.photo_profil,
             id: response.data.id,
             admin: response.data.admin, //tous ce qui est dans réponse concernant admin
             prof: response.data.prof,

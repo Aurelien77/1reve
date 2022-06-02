@@ -14,7 +14,24 @@
   
   
   }
+  .apparitionbarrecontexte {
 
+    & img {
+    height: 70px;
+  
+  margin: 1%;
+  border-radius: 20%;
+  border: solid rgb(40, 10, 188) 1px;
+  &:hover {
+    border: solid red 1px;
+  
+  
+  }
+    }
+    
+    
+    }
+  
 
 .profil {
 
