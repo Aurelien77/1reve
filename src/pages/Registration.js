@@ -11,7 +11,7 @@ function Registration() {
   };
 
   const validationSchema = Yup.object().shape({
-    username: Yup.string().min(3).max(15).required("L'username est requis"),
+    username: Yup.string().min(3).max(10).required("L'username est requis"),
     password: Yup.string().min(4).max(20).required("Le mots de passe est requis"),
     email: Yup.string()
       .email("L'email doit être valid")

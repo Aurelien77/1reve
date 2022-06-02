@@ -5,6 +5,7 @@ import { AuthContext } from "../helpers/AuthContext";
 import ThumbUpAltIcon from "@material-ui/icons/ThumbUpAlt";
 /* import LocalCafeIcon from "@material-ui/icons//LocalCafe"; */
 
+
 function Profile() {
   let { id } = useParams();
   let history = useHistory();
@@ -57,6 +58,24 @@ function Profile() {
           src={"https://reves7.herokuapp.com/images/" + photo_profil}
           alt="profil"
         />
+         <form
+                  action={"https://reves7.herokuapp.com/upload/" + id}
+                  method="POST"
+                  enctype="multipart/form-data"
+                >
+                  <div class="form-group">
+                    <input
+                      type="file"
+                      name="file"
+                      id="input-files"
+                      class="form-control-file border"
+                    />
+                  </div>
+
+                  <button type="submit" class="btn btn-primary" >
+                    Soumêtre l'image
+                  </button>
+                </form>
       </div>
 
 

@@ -13,6 +13,7 @@ class FlavorForm extends React.Component {
       } 
     
     constructor(props) {
+      localStorage.removeItem('Maquestion');
       super(props);
       this.state = {value: '?'};
       this.handleChange = this.handleChange.bind(this);
@@ -27,15 +28,7 @@ class FlavorForm extends React.Component {
     JSON.stringify(this.state.value));}
     
     handleSubmit(event) {
-     /*  alert('Votre question est bien : ' + this.state.value); */
-      
-     /*  props.history.push('/anim'); */
-   /*    window.location.href='/anim';    */
-  
-   
-    /* action="/"; */
-    /* 
-    FirstPage(); */
+    
   
       event.preventDefault();
     }

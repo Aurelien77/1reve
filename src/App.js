@@ -114,6 +114,8 @@ import axios from "axios";
 
 
 function App() {  
+
+  
   const [authState, setAuthState] = useState({
     username: "",
   /*   email: "", */
@@ -151,15 +153,14 @@ function App() {
   }, [] );
  
   const logout = () => {
-   
-   
+ 
+    
     localStorage.removeItem("accessToken");
     
     
     setAuthState({ /* email: "", */ username: "", prof: "", id: 0, status: false });
   
-  
-   
+    
   
   };
  

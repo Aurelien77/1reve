@@ -36,10 +36,13 @@ function CreatePost() {
       .post("https://reves7.herokuapp.com/posts", data, {
         headers: { accessToken: localStorage.getItem("accessToken") },
       })
+     
       .then(() => {
         history.push("/Home");
       });
   };
+
+  
 
   return (
     <div className="createPostPage">
@@ -70,10 +73,10 @@ function CreatePost() {
             placeholder="(Ex. Post...)"
             type="text"
           />{" "}
-          <label>Noter ici votre lien: </label>
+          <label>image :  </label>
           <ErrorMessage name="lien" component="span" />
           <Field
-            autoComplete="off"
+            autocomplete="off"
             id="lien"
             name="lien"
             placeholder="(Ex. htpp://monlien.com...)"

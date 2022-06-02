@@ -292,7 +292,7 @@ font-size: 1rem;;
 .background .ajustement .question .animcroix img {
   margin: 0.4%;
   border: 2px solid dodgerblue;
-  box-shadow: 13px 2px 5px rgb(37, 37, 37);
+  box-shadow: 5px 2px 5px rgb(37, 37, 37);
   animation: progressifretourne 3s;
   animation-fill-mode: forwards;
   width: 9vw;
@@ -978,6 +978,12 @@ span:nth-child(5) {
 
 .hidden {
   visibility: hidden;
+}
+
+.profil img {
+  height: 300px;
+  width: 250px;
+  border-radius: 20%;
 }
 
 .croix2modules {
