@@ -58,6 +58,10 @@ function Profile() {
           src={"https://reves7.herokuapp.com/images/" + photo_profil}
           alt="profil"
         />
+
+
+{(authState.username === username || authState.admin === true) && (
+              <>
          <form
                   action={"https://reves7.herokuapp.com/upload/" + id}
                   method="POST"
@@ -75,7 +79,7 @@ function Profile() {
                   <button type="submit" class="btn btn-primary" >
                     Soumêtre l'image
                   </button>
-                </form>
+                </form>    </> )}
       </div>
 
 
