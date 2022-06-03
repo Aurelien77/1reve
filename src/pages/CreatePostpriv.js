@@ -70,7 +70,7 @@ function CreatePost() {
             placeholder="(Ex. Post...)"
             type="text"
           />{" "}
-          <label>Noter ici votre lien: </label>
+          <label>Noter ici votre lien : </label>
           <ErrorMessage name="lien" component="span" />
           <Field
             autocomplete="off"

@@ -132,11 +132,11 @@ function Home() {
               <a target="blank" href={value.lien}>
                 {value.lien}
               </a>
-              
+         {/*      
               <img
           src={"https://reves7.herokuapp.com/images/" + photo_profil}
           alt="profil"
-        /> </div>
+        /> */} </div>
             <div>
          
            </div> </div> 

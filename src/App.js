@@ -112,7 +112,6 @@ import axios from "axios";
 
 
 
-
 function App() {  
 
 //ajout ppur photopro
@@ -126,7 +125,7 @@ function App() {
     username: "",
   /*   email: "", */
     id: 0,
-   /*  photo_profil: "", */
+    photo_profil: "", 
     prof: "",
     status: false,
   });
@@ -152,7 +151,7 @@ function App() {
           setAuthState({
             username: response.data.username,
             id: response.data.id,
-            photo_profil: response.data.photo_profil,
+            photo_profil: response.data.photo_profil, 
            /*  email: response.data.email, */
             prof: response.data.prof,
             status: true,
@@ -167,7 +166,7 @@ function App() {
     localStorage.removeItem("accessToken");
     
     
-    setAuthState({ /* email: "", */ username: "", prof: "", id: 0,photo_profil: "", status: false });
+    setAuthState({ /* email: "", */ username: "", prof: "", id: 0,photo_profil: "",  status: false });
   
     
   
@@ -198,10 +197,10 @@ function App() {
 
 <li id="username" className="username">   {!authState.prof && authState.username && (
   <>
-<img
+{/* <img
           src={"https://reves7.herokuapp.com/images/" + photo_profil}
           alt=""
-        />
+        /> */}
 
 
                   <Link to={`/postpriv/${authState.id}`}> 🪴
@@ -218,11 +217,11 @@ function App() {
 
 <>
 
-<img
+{/* <img
 src={"https://reves7.herokuapp.com/images/" + photo_profil}
 alt=""
 />
-
+ */}
 
 
 

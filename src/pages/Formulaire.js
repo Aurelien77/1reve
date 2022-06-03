@@ -1,7 +1,7 @@
 
+import { Button } from "bootstrap";
 import React, {   } from "react";
-import { useHistory } from "react-router-dom";
-import { Redirect } from 'react-router-dom';
+
 
 
 
@@ -17,7 +17,7 @@ class FlavorForm extends React.Component {
       super(props);
       this.state = {value: '?'};
       this.handleChange = this.handleChange.bind(this);
-      this.handleSubmit = this.handleSubmit.bind(this);
+     this.handleSubmit = this.handleSubmit.bind(this); 
 
       
     }
@@ -28,10 +28,10 @@ class FlavorForm extends React.Component {
     JSON.stringify(this.state.value));}
     
     handleSubmit(event) {
-    
+   
   
       event.preventDefault();
-    }
+    } 
     
     render() {
         
@@ -41,7 +41,7 @@ class FlavorForm extends React.Component {
        
         <form  ><div className="formulaire">
         <div>
-            <input value={this.state.value} onChange={this.handleChange}>           
+            <input value={this.state.value} onChange={this.handleChange} onSubmit={this.handleSubmit}>           
              
             </input>
             </div>

@@ -40,11 +40,11 @@ useEffect(() => {
      
       <div className="question grid-container">
 
-      <span > 
-  
-      <FlavorForm /> <button value="OK" onClick={() => {
+      <span  > 
+
+      <FlavorForm /> <button value="OK"  onClick={() => {
                   history.push(`/anim`);
-                } }> OK </button> 
+                } } > OK </button> 
 
         </span> 
 
