@@ -66,7 +66,7 @@ function CreatePost() {
   
 
     axios
-      .post("http://localhost:3001/postspriv", formData,   {
+      .post("https://reves7.herokuapp.com/postspriv", formData,   {
         headers: { accessToken: localStorage.getItem("accessToken") },
       })
    
