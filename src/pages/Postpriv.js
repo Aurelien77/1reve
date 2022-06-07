@@ -86,17 +86,10 @@ function Postpriv() {
                 {value.postText}
               </div>
             <div className="iframdiv">
-                <iframe id="imglien" className="lien"
-                    loading="lazy"
-               scrolling="no"
-               frameBorder="10"
-               overflow="hidden"
-               height="100%"
-               width="100%" 
+                <img
                   src={value.lien}
                 
-                  allowfullscreen ="true"
-                ></iframe>
+                ></img>
               
 </div>
          <div className="atarget">

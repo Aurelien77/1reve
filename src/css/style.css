@@ -1533,6 +1533,10 @@ span:nth-child(5) {
   align-content: center;
   text-align: center;
 }
+.listepostsparutilisateur .post3 .iframdiv img {
+  width: 100%;
+  height: 14vw;
+}
 .listepostsparutilisateur .post3 .iframdiv .lien {
   width: 100%;
   height: 10vw;
@@ -1797,6 +1801,10 @@ span:nth-child(5) {
 .indivi .post2 .body .lien {
   width: 100%;
   height: 100%;
+}
+.indivi .post2 .body .lien img {
+  width: 80%;
+  height: 80%;
 }
 .indivi .post2 .footer {
   /* border-top: 1px solid #d1515a; */

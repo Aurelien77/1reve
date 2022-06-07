@@ -153,18 +153,15 @@ function Post2() {
             {postObject.postText}
 
             <div className="lien">
-              <iframe
-                height="500px"
-                width="100%"
+              <img
+               
                 src={postObject.lien}
-                frameBorder="0"
-                allow="autoplay; encrypted-media"
-                allowFullScreen
+            
               />
-              <a target="blank" href={postObject.lien}>
+              
+            </div><a target="blank" href={postObject.lien}>
                 {postObject.lien}
               </a>
-            </div>
           </div>
 
           <div className="footer">

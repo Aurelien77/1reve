@@ -115,16 +115,13 @@ function Profile() {
               </div>
 
             <div className="iframdiv">
-                <iframe id="imglien" className="lien"
-                    loading="lazy"
-               scrolling="no"
-               frameBorder="10"
-               overflow="hidden"
+                <img id="imglien" className="lien"
+                   
                
                   src={value.lien}
                 
-                  allowfullscreen ="true"
-                ></iframe>
+                
+                />
               
 </div>
          <div className="atarget">
