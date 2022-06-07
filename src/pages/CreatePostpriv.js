@@ -1,3 +1,6 @@
+
+
+
 import React, { useEffect } from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
@@ -6,11 +9,7 @@ import { useHistory } from "react-router-dom";
 
 function CreatePost() {
   let history = useHistory();
-  const initialValues = {
-    title: "",
-    postText: "",
-    lien: "",
-  };
+
 
   useEffect(() => {
     if (!localStorage.getItem("accessToken")) {
@@ -30,12 +29,47 @@ function CreatePost() {
         "Entrer une URL correcte sous cette forme : https://www. !"
       ),
   });
-
+  const initialValues = {
+    title: "",
+    postText: "",
+   /*  image:"", */
+  
+  };
   const onSubmit = (data) => {
+    
+    const fileInput = document.querySelector('#your-file-input') ;
+    const filetitle = document.querySelector('#title') ; 
+    const filetexte = document.querySelector('#postText') ;
+
+
+
+    const formData = new FormData();
+    formData.append('image', fileInput.files[0]);
+    formData.append('title', filetitle.value);
+    formData.append('postText', filetexte.value);
+
+
+    console.log("console log de l'input titre ");
+  
+
+    console.log("console log de l'input postText ");
+    console.log(filetexte.value);
+
+    console.log("console log du fichier ");
+    console.log(fileInput.files[0]);
+
+    
+  
+    console.log("console log de formData ");
+    console.log(formData.append);
+
+  
+
     axios
-      .post("https://reves7.herokuapp.com/postspriv", data, {
+      .post("https://reves7.herokuapp.com/postspriv", formData,   {
         headers: { accessToken: localStorage.getItem("accessToken") },
       })
+   
       .then(() => {
         history.push("/Home");
       });
@@ -54,9 +88,11 @@ function CreatePost() {
           <ErrorMessage name="title" component="span" />
           <Field
             autocomplete="off"
-            id="inputCreatePost"
+            id="title"
             name="title"
             placeholder="(Ex. Title...)"
+            type="text"
+           
           />
           <label>Post: </label>
           <ErrorMessage name="postText" component="span" />
@@ -69,18 +105,27 @@ function CreatePost() {
             name="postText"
             placeholder="(Ex. Post...)"
             type="text"
+          
           />{" "}
-          <label>Noter ici votre lien : </label>
+          <label>Noter ici votre lien: </label>
           <ErrorMessage name="lien" component="span" />
+
+          
           <Field
+          
             autocomplete="off"
-            id="lien"
-            name="lien"
+            id="your-file-input"
+            name="image"
+            Content-Type="multipart/form-data"
             placeholder="(Ex. htpp://monlien.com...)"
+            type="file"
           />
           <button type="submit"> Créer un Post</button>
         </Form>
+        
       </Formik>
+    
+      
     </div>
   );
 }

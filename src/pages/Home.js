@@ -112,22 +112,32 @@ function Home() {
               {value.postText}
             
 
+
+
+
+
+
+
             <div className="iframdiv">
             <iframe  className="lien"
              loading="lazy"
-               scrolling="yes"
+               scrolling="no"
                frameBorder="10"
                overflow="hidden"
-               height="50%"
-               width="50%" 
-                  src={value.lien}
+                src={value.lien}
+                
                   allowfullscreen ="true"
-                 
+              
                 ></iframe>
               
            
               
               </div>
+
+
+
+
+              
               <div className="atarget">
               <a target="blank" href={value.lien}>
                 {value.lien}
