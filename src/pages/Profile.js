@@ -2,7 +2,7 @@ import React, { useEffect, useState, useContext } from "react";
 import { useParams, useHistory } from "react-router-dom";
 import axios from "axios";
 import { AuthContext } from "../helpers/AuthContext";
-import ThumbUpAltIcon from "@material-ui/icons/ThumbUpAlt";
+
 /* import LocalCafeIcon from "@material-ui/icons//LocalCafe"; */
 
 
@@ -60,7 +60,7 @@ function Profile() {
         />
 
 
-{(authState.username === username || authState.admin === true) && (
+{(authState.username === username || authState.admin === true) /* && (
               <>
          <form
                   action={"https://reves7.herokuapp.com/upload/" + id}
@@ -79,7 +79,7 @@ function Profile() {
                   <button type="submit" class="btn btn-primary" >
                     Soumêtre l'image
                   </button>
-                </form>    </> )}
+                </form>    </> ) */}
       </div>
 
 

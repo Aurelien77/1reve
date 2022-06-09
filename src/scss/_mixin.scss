@@ -15,6 +15,41 @@ font-size: 1rem;;
 
 } */
 
+@mixin ipad-ajustement_login_img {
+  @media only screen and (max-width:$ipadmin  ) and (min-width:$ipadmax  )  {
+
+
+
+
+width: auto;
+height: 20%;
+
+
+ }
+}
+
+@mixin ipad-ajustement_login_text {
+ @media only screen and (max-width:$ipadmin  )  and (min-width:$ipadmax  )  {
+
+
+
+
+font-size: 1.2vw;
+
+
+}
+}
+@mixin smartphone-ajustement_login_text {
+  @media only screen and (max-width:$smartphone  )    {
+
+
+
+
+font-size: 3vw;
+
+
+ }
+}
 
 //Mixin iphone =>    retouche les images en ligne sur iphone
 
@@ -595,7 +630,7 @@ text-align: center;
     @media only screen and (max-width: $smartphone) {
 
    width: 60%;
-   height: 30%;
+   height: 40%;
 
 
  

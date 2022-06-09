@@ -1169,7 +1169,13 @@ span:nth-child(5) {
 @media only screen and (max-width: 699px) {
   .accueil img {
     width: 60%;
-    height: 30%;
+    height: 40%;
+  }
+}
+@media only screen and (max-width: 1001px) and (min-width: 700px) {
+  .accueil img {
+    width: auto;
+    height: 20%;
   }
 }
 .accueil .presentationtitre {
@@ -1197,6 +1203,16 @@ span:nth-child(5) {
   margin: 0%;
   border-radius: 20%;
   /* box-shadow: 1px 1px 2px rgb(163, 158, 158); */
+}
+@media only screen and (max-width: 1001px) and (min-width: 700px) {
+  .accueil .presentation .transparent {
+    font-size: 1.2vw;
+  }
+}
+@media only screen and (max-width: 699px) {
+  .accueil .presentation .transparent {
+    font-size: 3vw;
+  }
 }
 .accueil .presentation .transparent a {
   font-weight: 500;
