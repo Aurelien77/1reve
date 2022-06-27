@@ -15,6 +15,36 @@ font-size: 1rem;;
 
 } */
 
+@mixin ipad-ajustement_menu_text {
+  @media only screen and (max-width:$ipadmaxmenu  )  and (min-width:$ipadmax  )  {
+ 
+ 
+ 
+ 
+ font-size: 1.8vw;
+ 
+ 
+ }
+ }
+
+
+ @mixin ipad-ajustement_question-button_text {
+  @media only screen and (max-width:$ipadmaxmenu  )  and (min-width:$ipadmax  )  {
+ 
+ 
+ 
+ 
+ font-size: 1.3vw;
+ 
+ 
+ }
+ }
+
+
+
+
+
+
 @mixin ipad-ajustement_login_img {
   @media only screen and (max-width:$ipadmin  ) and (min-width:$ipadmax  )  {
 

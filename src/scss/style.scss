@@ -466,7 +466,7 @@ justify-items: center;
 & .apparitionbarrecontexte {
 
  
-
+@include ipad-ajustement_menu_text;
 
 display: flex;
 flex-direction: row;
@@ -520,7 +520,7 @@ color: #0d11e9;
 
 
  & #username{
-
+  @include ipad-ajustement_menu_text;
   -webkit-text-stroke: 0.5px rgb(163, 17, 221);
   font-size: 1.8rem;
   width: 100%;
@@ -1306,12 +1306,28 @@ border-radius: 20%;
 
 & .formContainer {
 
+  & form {
+    & input {
+
+      margin-bottom: 3%;
+    
+    
+    }
+
+
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+  align-content: center;
+  }
 @include smartphone-ajustement_formulaire;
 
 
 & .POSTPRIVE span {
 color: #0d11e9;
 font-weight: 800;
+
 }
 
 & .POSTPUBLIC span {

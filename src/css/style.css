@@ -169,6 +169,11 @@ font-size: 1rem;;
   flex-direction: row;
   justify-content: center;
 }
+@media only screen and (max-width: 1500px) and (min-width: 700px) {
+  .background .navigationquestion {
+    font-size: 1.3vw;
+  }
+}
 @media only screen and (min-width: 3000px) {
   .background .navigationquestion {
     font-size: 30px;
@@ -222,6 +227,11 @@ font-size: 1rem;;
     margin-top: 8%;
     margin-left: 2%;
     margin-right: 2%;
+  }
+}
+@media only screen and (max-width: 1500px) and (min-width: 700px) {
+  .background .navigationreponse {
+    font-size: 1.3vw;
   }
 }
 .background .navigationreponse button {
@@ -1340,6 +1350,11 @@ span:nth-child(5) {
   justify-content: center;
   width: 100%;
 }
+@media only screen and (max-width: 1500px) and (min-width: 700px) {
+  .ajust .barredenavigation .apparitionbarrecontexte {
+    font-size: 1.8vw;
+  }
+}
 .ajust .barredenavigation .apparitionbarrecontexte button {
   margin: 2%;
   padding: 1%;
@@ -1405,6 +1420,11 @@ span:nth-child(5) {
   -webkit-text-stroke: 0.5px rgb(163, 17, 221);
   font-size: 1.8rem;
   width: 100%;
+}
+@media only screen and (max-width: 1500px) and (min-width: 700px) {
+  .ajust .barredenavigation .apparitionbarrecontexte #username {
+    font-size: 1.8vw;
+  }
 }
 .ajust .barredenavigation .apparitionbarrecontexte #username2 {
   -webkit-text-stroke: 0.5px rgb(163, 17, 221);
@@ -2025,6 +2045,15 @@ span:nth-child(5) {
   margin-bottom: 15%;
   background-size: cover;
   /*  background: no-repeat, url(../logos/icon.svg); */
+}
+.createPostPage .formContainer form {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-content: center;
+}
+.createPostPage .formContainer form input {
+  margin-bottom: 3%;
 }
 @media only screen and (max-width: 699px) {
   .createPostPage .formContainer {

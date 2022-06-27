@@ -1,132 +1,189 @@
-
-
-
-import React, { useEffect } from "react";
-import { Formik, Form, Field, ErrorMessage } from "formik";
-import * as Yup from "yup";
-import axios from "axios";
+import { useState, useEffect} from 'react'
+import axios from 'axios'
 import { useHistory } from "react-router-dom";
 
-function CreatePost() {
-  let history = useHistory();
+import * as Yup from "yup";
 
+/* 
+import './App.css' */
+
+async function postImage({image, description, text}) {
+
+  const formData = new FormData();
+  formData.append("image", image)
+  formData.append("description", description)
+  formData.append("text", text)
+
+
+
+/*   console.log("formData.append");
+  console.log(formData.append); */
+
+  const result = await axios.post('https://reves7.herokuapp.com/images', formData, { headers: {'Content-Type': 'multipart/form-data',  accessToken: localStorage.getItem("accessToken")}})
+
+
+
+
+
+
+
+
+
+  
+  console.log(result.data);
+  return result.data;
+ 
+
+
+
+};
+
+
+function CreatePost() {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  let history = useHistory();
 
   useEffect(() => {
     if (!localStorage.getItem("accessToken")) {
       history.push("/login");
     }
   }, []);
-  const validationSchema = Yup.object().shape({
-    title: Yup.string().required("Vous devez entrer un titre"),
-    postText: Yup.string()
-      .min(8)
-      .max(60000)
-      .required("Vous devez entrer du texte"),
-    lien: Yup.string()
-      .notRequired("Vous pouvez poster sans insérer de lien")
-      .matches(
-        /((https?):\/\/)?()/,   /*  /((https?):\/\/)?(www.)/, */
-        "Entrer une URL correcte sous cette forme : https://www. !"
-      ),
-  });
-  const initialValues = {
-    title: "",
-    postText: "",
-   /*  image:"", */
-  
-  };
-  const onSubmit = (data) => {
-    
-    const fileInput = document.querySelector('#your-file-input') ;
-    const filetitle = document.querySelector('#title') ; 
-    const filetexte = document.querySelector('#postText') ;
 
 
 
-    const formData = new FormData();
-    formData.append('image', fileInput.files[0]);
-    formData.append('title', filetitle.value);
-    formData.append('postText', filetexte.value);
+  const [file, setFile] = useState()   // Set le state avec le nom du fichier 
+
+  const [description, setDescription] = useState("") // Set le state avec la decritpion entrer dans input text
 
 
-    console.log("console log de l'input titre ");
-  
+  const [text, setText] = useState("") 
 
-    console.log("console log de l'input postText ");
-    console.log(filetexte.value);
 
-    console.log("console log du fichier ");
-    console.log(fileInput.files[0]);
 
-    
-  
-    console.log("console log de formData ");
-    console.log(formData.append);
 
-  
+  const [images, setImages] = useState([])
 
-    axios
-      .post("https://reves7.herokuapp.com/postspriv", formData,   {
-        headers: { accessToken: localStorage.getItem("accessToken") },
-      })
-   
-      .then(() => {
-        history.push("/Home");
-      });
-  };
-  //posts BIO +
+  const submit = async event => {
+
+    event.preventDefault()
+
+    const result = await postImage({image: file, description, text})
+
+    setImages([result.imagePath, ...images])
+
+   /*  console.log("Le resultat de SUBMIT ");
+    console.log(result.imagePath); */
+
+      history.push(`/Home`);
+
+ 
+
+
+
+  }
+
+  const fileSelected = event => {
+    const file = event.target.files[0]
+		setFile(file)
+	}
+
   return (
     <div className="createPostPage">
-      <Formik
-        initialValues={initialValues}
-        onSubmit={onSubmit}
-        validationSchema={validationSchema}
-      >
-        <Form className="formContainer">
-          <div className="POSTPRIVE">Créer un post <span>PRIVE</span></div>
-          <label>Title: </label>
-          <ErrorMessage name="title" component="span" />
-          <Field
-            autocomplete="off"
-            id="title"
-            name="title"
-            placeholder="(Ex. Title...)"
-            type="text"
-           
-          />
-          <label>Post: </label>
-          <ErrorMessage name="postText" component="span" />
-          <Field
-            cols="45"
-            rows="4"
-            component="textarea"
-            autocomplete="off"
-            id="postText"
-            name="postText"
-            placeholder="(Ex. Post...)"
-            type="text"
-          
-          />{" "}
-          <label>Noter ici votre lien: </label>
-          <ErrorMessage name="lien" component="span" />
 
-          
-          <Field
-          
-            autocomplete="off"
-            id="your-file-input"
-            name="image"
-            Content-Type="multipart/form-data"
-            placeholder="(Ex. htpp://monlien.com...)"
-            type="file"
-          />
-          <button type="submit"> Créer un Post</button>
-        </Form>
+<div className="formContainer">
+
+<form  onSubmit={submit} >
+
+      <div className="POSTPRIVE">Créer un post <span>PRIVE</span></div>
+      <label>Title: </label>
+{/* 
+      <ErrorMessage name="title" component="span" />
+ */}
+        <input value={description} onChange={e => setDescription(e.target.value)} type="text" id="title" required/>
+       
+       
+       
+       
+       
+       
+       
+        <label>Post:  </label>
+
+      {/*   <ErrorMessage name="text" component="span" /> */}
+
+
+
+
+
+         <input value={text} onChange={i => setText(i.target.value)} type="text" id="text" minlength="4" maxlength="200" size="10"  required/>
+
+
+        {/*  <ErrorMessage name="image" component="span" /> */}
+
+
+
+         <input onChange={fileSelected} type="file" accept="image/*"  id="image" required/>
         
-      </Formik>
+
+
+
+
+
+
+        <button type="submit">Submit</button>
+        </form>
+   
+
+
+
+
+  {/*     {images.map( images => (
+        <div key={images}>
+          <img src={images}></img>
+        </div>
+      ))} */}
+   
     
-      
+
     </div>
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   );
 }
 
