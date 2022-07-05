@@ -101,6 +101,8 @@ function Profile() {
 {/* Map de la liste enegistrée dan l'autState avec la clée listOfPosts */}
 
         {listOfPosts.map((value, key) => {
+
+const date = new Date(value.createdAt);
           return (
       
             <div key={key} className="post3">
@@ -133,7 +135,7 @@ function Profile() {
                 <div className="textfooter">
              {/*       {value.createdAt.replace('T', ' à ').slice(0, 18)} */}
 
-           Le {new Intl.DateTimeFormat('local').format(value.createAt)}
+             {new Intl.DateTimeFormat('local').format(date)}
                 </div>
 
      {/*            <div className="buttons">

@@ -30,9 +30,7 @@ function Postpriv() {
         setListOfPosts2(response.data);
       });
   }, []);
-/*   const mode2 = () => {
-    window.location.reload(false);
-  }; */
+
 
   return (
     <div className="grid">
@@ -45,15 +43,6 @@ function Postpriv() {
         />
       </div>
     
-        {/*    <button
-        onClick={() => {
-          history.push("/createpostpriv");
-        }}
-      >
-        {" "}
-        créer Publication privées
-      </button> */}
-
         <div className="boutonpriv">
           {" "}
           {(authState.username === username || authState.prof === true) && (
@@ -71,6 +60,8 @@ function Postpriv() {
 
               <div className="listepostsparutilisateur">
         {listOfPosts.map((value, key) => {
+
+const date = new Date(value.createdAt);
           return (
       
             <div key={key} className="post3">
@@ -92,16 +83,12 @@ function Postpriv() {
                 ></img>
               
 </div>
-         <div className="atarget">
-<a target="blank" href={value.lien}>
-                  {value.lien}
-                </a>
-             </div>
+
               <div className="footer">
                 <div className="textfooter">
             
+                {new Intl.DateTimeFormat('local').format(date)}
            
-            Le {new Intl.DateTimeFormat('local').format(value.createAt)}
               
                 </div>
 
@@ -111,50 +98,8 @@ function Postpriv() {
           );
         })}
       
-      
-      
-      
-      
       </div>
 
-
-
-
-
-
-
-
-
-
-
-
-              {/*   <form
-                action={"https://reves-de-piano.herokuapp.com/upload/" + id}
-                method="POST"
-                enctype="multipart/form-data"
-              >
-                <div class="form-group">
-                  <input
-                    type="file"
-                    name="file"
-                    id="input-files"
-                    class="form-control-file border"
-                  />
-                </div>
-
-                <button type="submit" class="btn btn-primary">
-                  Soumêtre l'image
-                </button>
-              </form> */}
-
-              {/*  <button
-                onClick={() => {
-                  history.push("/delete");
-                }}
-              >
-                {" "}
-                Supprimer le compte
-              </button> */}
             </>
           )}
         </div>

@@ -55,11 +55,7 @@ function Acuueil() {
        </div>
                   
 <br></br>
-                  <div className="">Les trois derniers s
-
-        
-                
-                  </div> 
+             
         
                   </div>
           <Switch>

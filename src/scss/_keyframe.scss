@@ -1,5 +1,5 @@
 @keyframes progressif {
-    0%    { opacity: 0.1; }
+    0%    { opacity: 0.1;  }
     20%   { opacity: 0.2; }
     40%   { opacity: 0.4; }
     60%   { opacity: 0.6; }
@@ -180,3 +180,49 @@
  span:nth-child(5){
    animation-delay: 0.5s;
  }
+
+ @keyframes loader {
+
+
+
+  100%  {  z-index: -10; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+@keyframes bounceIn {
+  0% {
+    transform: scale(0.1);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes cascade {
+  from {
+    transform: translatey(20px);
+    opacity: 0%;
+  }
+  to {
+    transform: translatey(0px);
+    opacity: 100%;
+  }
+}
+

@@ -4,6 +4,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { Link, useHistory } from "react-router-dom";
 import ThumbUpAltIcon from "@material-ui/icons/ThumbUpAlt";
+  
 
 import "bootstrap/dist/css/bootstrap.min.css";
 
@@ -12,7 +13,6 @@ import "bootstrap/dist/css/bootstrap.min.css";
 function Home() {
   const [listOfPosts, setListOfPosts] = useState([]);
   const [likedPosts, setLikedPosts] = useState([]);
-  const [photo_profil, setphoto_profil] = useState([]);
 
   let history = useHistory();
 
@@ -85,11 +85,38 @@ function Home() {
 
 
 
-  return (
-    <div className="containerpost">  
+  return ( <div>
+    
+    <div className="animation">
+     
 
 
+     <div class="animation__bloc">
+           <div class="animation__ball animation__ball1"><i class="fas"></i></div>
+           <div class="animation__ball animation__ball2"> <i class="fas"></i></div>
+           <div class="animation__ball animation__ball3"><i class="fas"></i></div>
+         </div> 
+         </div>
  
+        <div className="containerpost">  
+
+
+
+
+
+   
+
+
+
+
+
+
+
+
+
+
+
+
       {listOfPosts.map((value, key) => {
 
        
@@ -97,7 +124,33 @@ function Home() {
         return (
      
         
-          <div  key={key}  className="post">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+          <div  key={key}  className="post ">
+
 
 
            
@@ -140,11 +193,7 @@ function Home() {
               <a target="blank" href={value.lien}>
                 {value.lien}
               </a>
-         {/*      
-              <img
-          src={"https://reves7.herokuapp.com/images/" + photo_profil}
-          alt="profil"
-        /> */} </div>
+   </div>
             <div>
          
            </div> </div> 
@@ -173,11 +222,61 @@ function Home() {
                 />
                 <label className="white"> {value.Likes.length}</label>
            
-            </div>  </div> </div> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+           
+            </div>       
+            
+            
+            
+            
+    
+</div>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            </div> 
+
+
+
+
+            
          
         );
       })}
-    </div> 
+
+  
+    </div>  </div>
+   
   );
 }
 
