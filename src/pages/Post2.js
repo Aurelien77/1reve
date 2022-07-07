@@ -88,7 +88,7 @@ function Post2() {
         headers: { accessToken: localStorage.getItem("accessToken") },
       })
       .then(() => {
-        history.push("/Home");
+        history.push(`/postpriv2/${authState.id}`);
       });
   };
 
@@ -159,9 +159,9 @@ function Post2() {
             
               />
               
-            </div><a target="blank" href={postObject.lien}>
+            </div>{/* <a target="blank" href={postObject.lien}>
                 {postObject.lien}
-              </a>
+              </a> */}
           </div>
 
           <div className="footer">

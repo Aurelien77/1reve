@@ -29,7 +29,7 @@ function ChangePassword() {
   };
 
   return (
-    <div>
+    <div className="changemdp">
       <h1>Changer votre mots de passe</h1>
       <input
         type="text"

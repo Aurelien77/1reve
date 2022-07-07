@@ -21,6 +21,8 @@ import Delete from "./pages/Delete";
 import Accueil from "./pages/Accueil";
 import Recherche from "./pages/Recherche";
 import Postpriv from "./pages/Postpriv";
+import Postpriv2 from "./pages/Postpriv2";
+
 import FlavorForm from "./pages/Formulaire";
 
 //Partie tirage 
@@ -109,6 +111,7 @@ import EssayForm from "./pages/component/textarea";
 import { AuthContext } from "./helpers/AuthContext";
 import { useState, useEffect } from "react";
 import axios from "axios";
+
 
 
 
@@ -225,7 +228,7 @@ alt=""
 
 
 
-                  <Link to={`/profile/${authState.id}`}>🪴
+                  <Link to={`/postpriv/${authState.id}`}>🪴
                     {authState.username}
                   </Link>
 
@@ -249,7 +252,7 @@ alt=""
                 )}</li>
 
 <li className="priv" >{authState.status && (
-                  <Link to={`/postpriv/${authState.id}`}>
+                  <Link to={`/postpriv2/${authState.id}`}>
                     ​📜​Mes Posts Privés
                   </Link>
                 )}</li>
@@ -413,6 +416,9 @@ alt=""
             <Route path="/postsecondaire/:id" exact component={Post2} />   {/*   Page du post individuelle privé */}
 
             <Route path="/postpriv/:id" exact component={Postpriv} />
+            <Route path="/postpriv2/:id" exact component={Postpriv2} />
+
+
             <Route path="/changepassword" exact component={ChangePassword} />
             <Route path="/createpostpriv" exact component={Createpostpriv} />
 {/* Login et enregisrement utilisateur  */}

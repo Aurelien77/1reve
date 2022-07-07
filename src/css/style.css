@@ -1015,6 +1015,26 @@ span:nth-child(5) {
     opacity: 100%;
   }
 }
+.changemdp {
+  display: flex;
+  flex-direction: column;
+}
+.changemdp input {
+  text-align: center;
+  margin: 5%;
+  padding: 5%;
+  border-radius: 20%;
+}
+.changemdp button {
+  background-color: #9ebdd2;
+  border-radius: 20%;
+  margin-bottom: 20%;
+}
+.changemdp button:hover {
+  background-color: #0de918;
+  color: red;
+}
+
 .loading {
   position: fixed;
   width: 100%;
@@ -1515,6 +1535,7 @@ span:nth-child(5) {
   width: 100%;
   height: 100%;
   display: flex;
+  flex-direction: row-reverse;
   flex-wrap: wrap;
   margin: 0px;
   padding: 0px;
@@ -1524,7 +1545,6 @@ span:nth-child(5) {
   width: 19%;
   height: 100%;
   justify-items: center;
-  flex-direction: column;
   align-items: center;
   align-content: center;
   justify-content: center;
@@ -1684,6 +1704,186 @@ span:nth-child(5) {
   border-bottom-right-radius: 15px;
 }
 
+.listepostsparutilisateur2 {
+  /*   padding-left: 1%;
+    padding-right: 1%; */
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column-reverse;
+  flex-wrap: wrap;
+  padding: 0px;
+  align-items: center;
+}
+.listepostsparutilisateur2 .post3 {
+  width: 50%;
+  height: 100%;
+  margin-bottom: 2%;
+  margin-top: 2%;
+  /*   margin-left: 20%;
+    margin-right: 20%; */
+  justify-items: center;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  text-align: center;
+  /*  margin: 0.2%;
+  margin-top: 1%; */
+  border: 1px solid #d1515a;
+  /* font-family: Arial, Helvetica, sans-serif; */
+  box-shadow: rgb(15, 15, 12) 0px 2px 8px 0px;
+  border-radius: 15px;
+  background-color: white;
+  /* background-image: url(./logos/icon.svg); */
+}
+@media only screen and (max-width: 699px) {
+  .listepostsparutilisateur2 .post3 {
+    width: 50%;
+    height: 100%;
+    border-radius: 10px;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    margin: 3%;
+    /* color: black; */
+    border: 1px solid #d1515a;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    box-shadow: rgb(15, 15, 12) 0px 2px 8px 0px;
+    border-radius: 15px;
+    background-color: white;
+  }
+}
+@media only screen and (min-width: 1001px) and (max-width: 700px) {
+  .listepostsparutilisateur2 .post3 {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    margin: 0.5%;
+    /* color: black; */
+    border: 1px solid #d1515a;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    box-shadow: rgb(15, 15, 12) 0px 2px 8px 0px;
+    border-radius: 15px;
+    background-color: white;
+  }
+}
+.listepostsparutilisateur2 .post3 .title {
+  background-color: #122441;
+  width: 100%;
+  height: 70px;
+  display: flex;
+  place-content: center;
+  color: white;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  margin: 0%;
+  padding: 2%;
+  box-shadow: rgba(13, 13, 14, 0.2) 0px 7px 29px 0px;
+  font-size: 20px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.listepostsparutilisateur2 .post3 .body {
+  width: 100%;
+  height: 30vw;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  height: 60px;
+  margin-left: 0%;
+  margin-right: 0%;
+  font-weight: 500;
+  background-color: #a9a2eb;
+  color: black;
+  white-space: pre-line;
+  font-size: 20px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  align-items: center;
+  align-content: center;
+}
+@media only screen and (max-width: 699px) {
+  .listepostsparutilisateur2 .post3 .body {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    height: 60px;
+    margin-left: 0%;
+    margin-right: 0%;
+    font-weight: 500;
+    background-color: #a9a2eb;
+    color: black;
+    white-space: pre-line;
+    font-size: 20px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    align-items: center;
+    align-content: center;
+  }
+}
+.listepostsparutilisateur2 .post3 .iframdiv {
+  font-size: 2px;
+  width: 100%;
+  height: 20vw;
+  padding: 0%;
+  height: 10%;
+  align-items: center;
+  align-content: center;
+  text-align: center;
+}
+.listepostsparutilisateur2 .post3 .iframdiv img {
+  max-height: 40vw;
+  max-width: 50vw;
+  /* height: 14vw; */
+}
+.listepostsparutilisateur2 .post3 .iframdiv .lien {
+  width: 100%;
+  height: 10vw;
+  padding: 0%;
+  /*    height: 10vw; */
+  align-items: center;
+  align-content: center;
+  border: #0a0a0a solid 7px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: center;
+}
+.listepostsparutilisateur2 .post3 .atarget {
+  height: 22px;
+  align-items: center;
+  align-content: center;
+  font-size: 8px;
+  text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #121314;
+}
+.listepostsparutilisateur2 .post3 .footer {
+  /* border-top: 1px solid #d1515a; */
+  width: 100%;
+  height: 5%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  text-align: center;
+  padding: 1%;
+  align-items: center;
+  background-color: #122441;
+  color: white;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
 .grid {
   display: flex;
   flex-direction: column;
@@ -1693,7 +1893,15 @@ span:nth-child(5) {
 }
 .grid .boutonpriv button {
   border-radius: 30%;
+  background-color: rgb(30, 0, 255);
+  margin-left: 1%;
+  color: white;
+  padding: 0.2%;
+}
+.grid .boutonpriv button.changemdp {
   background-color: red;
+  color: white;
+  padding: 0.2%;
 }
 .grid .boutonpriv button :hover {
   background-color: rgb(131, 8, 8);
@@ -1767,6 +1975,89 @@ span:nth-child(5) {
   animation-delay: 0.3s;
   margin: 5px;
   width: 10%;
+  border-radius: 50%;
+}
+
+.animation2 {
+  /*   animation:  progressif;
+    animation-delay: 20s; */
+  /*   display: flex; */
+  position: fixed;
+  /*  margin-top: 10%; */
+  border-radius: 20%;
+  width: 100%;
+  height: 100%;
+  /*   background-color: white; */
+  animation: loader 30s;
+  animation-delay: 1.5s;
+  animation-fill-mode: both;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.animation2__bloc {
+  background-color: #0de918;
+  display: flex;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-size: 26px;
+  margin: 20px;
+}
+.animation2__ball {
+  margin: 0.5%;
+  background-image: url(../logos/icon.jpg);
+  background-position-x: center;
+  background-position-y: center;
+  background-size: auto;
+  background-size: cover;
+  /*  background-position: auto;  */
+  background-repeat: no-repeat;
+  height: 40%;
+  width: 60%;
+  /* border-radius: 15%; */
+  animation: bounceIn 1s;
+  animation-iteration-count: 10;
+}
+@media only screen and (min-width: 800px) and (max-width: 1000px) {
+  .animation2__ball {
+    height: 20%;
+    width: 20%;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .animation2__ball {
+    height: 10%;
+    width: 10%;
+  }
+}
+@media only screen and (min-width: 1600px) {
+  .animation2__ball {
+    height: 50%;
+    width: 50%;
+  }
+}
+.animation2__ball1 {
+  /*  background-color: green; */
+  animation-delay: 0.5s;
+  margin: 2px;
+  width: 20%;
+  border-radius: 50%;
+}
+.animation2__ball2 {
+  /* background-color: green; */
+  animation-delay: 0.5s;
+  margin: 2px;
+  width: 20%;
+  border-radius: 50%;
+}
+.animation2__ball3 {
+  /* background-color: red; */
+  animation-delay: 0.3s;
+  margin: 2px;
+  width: 20%;
   border-radius: 50%;
 }
 
@@ -1983,8 +2274,8 @@ span:nth-child(5) {
   height: 100%;
 }
 .indivi .post2 .body .lien img {
-  width: 80%;
-  height: 80%;
+  width: 100%;
+  height: 100%;
 }
 .indivi .post2 .footer {
   /* border-top: 1px solid #d1515a; */

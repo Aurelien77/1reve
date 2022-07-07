@@ -9,7 +9,30 @@
 @import "keyframe";
 
 
+.changemdp {
+display: flex;
+flex-direction: column;
+& input {
+  text-align: center;
+margin: 5%;
+padding: 5%;
+border-radius: 20%;
 
+}
+& button {
+background-color: #9ebdd2;
+  border-radius: 20%;
+margin-bottom: 20%;
+&:hover{
+
+background-color: #0de918;
+color: red;
+
+}
+}
+
+
+}
 
 
 
@@ -623,6 +646,7 @@ color: #a9a2eb;
   width:100%;
   height: 100%;
   display: flex;
+flex-direction: row-reverse;
 flex-wrap: wrap;
 margin: 0px;
 padding: 0px;
@@ -631,7 +655,7 @@ justify-content: center;
   width: 19%;
   height: 100%;
 justify-items: center;
-  flex-direction: column;
+  
   align-items: center;
   align-content: center;
   justify-content: center;
@@ -761,6 +785,157 @@ padding: 0%;
   
   }
    
+
+
+  .listepostsparutilisateur2 {
+
+    /*   padding-left: 1%;
+      padding-right: 1%; */
+      width:100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column-reverse;
+    flex-wrap: wrap;
+    
+    padding: 0px;
+   align-items: center;
+    & .post3 {
+      width: 50%;
+      height: 100%;
+      margin-bottom: 2%;
+      margin-top: 2%;
+  /*   margin-left: 20%;
+    margin-right: 20%; */
+    justify-items: center;
+      flex-direction: column;
+      align-items: center;
+      align-content: center;
+      justify-content: center;
+      text-align: center;
+     /*  margin: 0.2%;
+    margin-top: 1%; */
+      border: 1px solid #d1515a;
+      /* font-family: Arial, Helvetica, sans-serif; */
+    
+      box-shadow: rgba(15, 15, 12, 2) 0px 2px 8px 0px;
+      border-radius: 15px;
+      background-color: white;
+    
+      /* background-image: url(./logos/icon.svg); */
+      @include smartphone-grid;
+      @include ipad-grid;
+    
+    
+       & .title {
+        background-color: #122441;
+        width: 100%;
+        height: 70px;
+        display: flex;
+        place-content: center;
+        color: white;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+      margin: 0%;
+        padding: 2%;
+        box-shadow: rgba(13, 13, 14, 0.2) 0px 7px 29px 0px;
+        font-size: 20px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    
+    & .body {
+      @include smartphone-grid-body;
+      width: 100%;
+       height: 30vw; 
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      height: 60px;
+      margin-left: 0%;
+      margin-right: 0%;
+      
+      font-weight: 500;
+      background-color: #a9a2eb;
+      color: black;
+      white-space: pre-line;
+      font-size: 20px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      align-items: center;
+      align-content: center;
+    
+     
+    }
+    
+    & .iframdiv {
+    & img {
+    max-height: 40vw;
+    max-width: 50vw;
+    /* height: 14vw; */
+    
+    }
+      font-size: 2px;
+      width: 100%;
+        height: 20vw; 
+    padding: 0%;
+    height: 10%; 
+    align-items: center;
+    align-content: center;
+    text-align: center;
+        & .lien {
+          width: 100%;
+        height: 10vw; 
+    padding: 0%;
+       /*    height: 10vw; */
+          align-items: center;
+          align-content: center;
+          border: #0a0a0a solid 7px;
+      
+          overflow: hidden;
+          text-overflow: ellipsis;
+          text-align: center;
+    
+    
+            }
+            
+    }
+    
+    &  .atarget{
+      height: 22px; 
+              align-items: center;
+              align-content: center;
+              font-size: 8px;
+              text-align: center;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              color: #121314;
+        
+            }
+    
+    
+      & .footer {
+        /* border-top: 1px solid #d1515a; */
+      
+        width: 100%;
+        height: 5%;
+        display: flex;
+        flex-direction: row;
+      justify-content: center;
+        
+      text-align: center;
+        padding: 1%;
+        align-items: center;
+      
+        background-color: #122441;
+        color: white;
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
+      }
+    
+    
+    }
+      
+      }
   
   .grid {
     display: flex;
@@ -776,7 +951,17 @@ padding: 0%;
 
     & .boutonpriv button {
       border-radius: 30%;
-      background-color: red;
+      
+      background-color: rgb(30, 0, 255);
+      margin-left: 1%;
+      color: white;
+padding: 0.2%;
+      &.changemdp {
+        background-color: red;
+color: white;
+padding: 0.2%;
+
+      }
       & :hover {
 
         background-color: rgb(131, 8, 8);
@@ -869,7 +1054,76 @@ margin: 0px;
 
 }
   
-
+.animation2 {
+  /*   animation:  progressif;
+    animation-delay: 20s; */
+ 
+  /*   display: flex; */
+    position: fixed;
+   
+   /*  margin-top: 10%; */
+   border-radius: 20%;
+    width: 100%;
+    height: 100%;
+  /*   background-color: white; */
+    animation: loader 30s;
+    animation-delay: 1.5s;
+    animation-fill-mode: both; 
+    z-index: 1;
+    @include centrer; 
+   
+    &__bloc {
+      background-color: #0de918;
+      display: flex;
+      width: 100%;
+      @include icharg;
+    }
+    &__ball {
+      @include ipad-ajustement_background;
+      @include smartphone-ajustement_background;
+      @include grand-ecran-ajustement_background;
+ margin: 0.5%;
+    background-image: url(../logos/icon.jpg);
+      background-position-x: center;
+      background-position-y: center; 
+      background-size: auto;
+    background-size: cover;
+   /*  background-position: auto;  */
+    background-repeat: no-repeat;
+      height: 40%;
+      width: 60%; 
+      /* border-radius: 15%; */
+      animation: bounceIn 1s;
+      animation-iteration-count: 10;
+    
+    }
+  
+    &__ball1 {
+    
+      
+     /*  background-color: green; */
+      animation-delay: 0.5s;
+      margin: 2px;
+      width: 20%;
+      border-radius: 50%;
+    }
+    &__ball2 {
+      /* background-color: green; */
+      animation-delay: 0.5s;
+      margin: 2px;
+      width: 20%;
+      border-radius: 50%;
+    }
+    &__ball3 {
+      /* background-color: red; */
+      animation-delay: 0.3s;
+      margin: 2px;
+      width: 20%;
+      border-radius: 50%;
+    }
+  
+  
+  }
 
 //FIN PAGE LISTE DES POSTS PAR UTILISATEURS  
 
@@ -1137,9 +1391,9 @@ word-wrap: break-word;
 
         & img {
 
-          width: 80%;
+          width: 100%;
       
-          height:80%;
+          height:100%;
 
         }
       }

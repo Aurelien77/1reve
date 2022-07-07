@@ -5,7 +5,7 @@ import { AuthContext } from "../helpers/AuthContext";
 
 
 
-function Postpriv() {
+function Postpriv2() {
   let { id } = useParams();
   let history = useHistory();
   const [username, setUsername2] = useState("");
@@ -32,10 +32,20 @@ function Postpriv() {
   }, []);
 
 
-  return (
+  return (<div>
+    
+    <div className="animation2">
+     
+
+
+    
+           <div class="animation2__ball animation2__ball1"><i class="fas"></i></div>
+           <div class="animation2__ball animation2__ball2"> <i class="fas"></i></div>
+           <div class="animation2__ball animation2__ball3"><i class="fas"></i></div>
+         
+         </div>
     <div className="grid">
-  
-      <h1> Fiche de : {username} </h1>
+      <h1> Fiche de : {username}</h1>
   {/*     <div className="profil">
         <img
          
@@ -48,24 +58,28 @@ function Postpriv() {
           {" "}
           {(authState.username === username || authState.prof === true) && (
             <>
-                 <button className="changemdp"
+                {/*  <button className=""
                 onClick={() => {
-                  history.push("/changepassword");
+                  history.push("#");
                 }}
               >
                 {" "}
                 Changer mon mots de passe
-              </button> 
+              </button>  */}
 
               <button className=""
                 onClick={() => {
-                  history.push(`/postpriv2/${authState.id}`);
+                  history.push(`/postpriv/${authState.id}`);
                 }}
               >
               Changer de vue
               </button> 
 
-              <div className="listepostsparutilisateur">
+           
+
+
+
+              <div className="listepostsparutilisateur2">
         {listOfPosts.map((value, key) => {
 
 const date = new Date(value.createdAt);
@@ -114,11 +128,11 @@ const date = new Date(value.createdAt);
   
       
       
-        </div>
       
       
       
+      </div> </div>
   );
 }
 
-export default Postpriv;
+export default Postpriv2;

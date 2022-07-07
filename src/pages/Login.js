@@ -31,7 +31,7 @@ function Login() {
             prof: response.data.prof,
             status: true,
           });
-          history.push("/Home");
+          history.push(`/postpriv2/${response.data.id}`);
         }
       });
   };

@@ -15,6 +15,46 @@ font-size: 1rem;;
 
 } */
 
+@mixin ipad-ajustement_background {
+  @media only screen and (min-width:800px  ) and (max-width:1000px  )    {
+
+
+
+
+    height: 20%;
+    width: 20%;
+
+
+ }
+}
+
+@mixin grand-ecran-ajustement_background {
+  @media only screen and (min-width:1600px  )    {
+
+
+
+
+    height: 50%;
+    width: 50%;
+
+
+ }
+}
+
+
+@mixin smartphone-ajustement_background {
+  @media only screen and (max-width:800px  )    {
+
+
+
+
+    height: 10%;
+    width: 10%;
+
+
+ }
+}
+
 @mixin centrer {
   display: flex;
   justify-content: center;
