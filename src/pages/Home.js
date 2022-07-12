@@ -173,13 +173,13 @@ function Home() {
 
 
             <div className="iframdiv">
-            <img  className="lien"
+            <iframe  className="lien"
              
                 src={value.lien}
                 
                   allowfullscreen ="true"
               
-                ></img>
+                ></iframe>
               
            
               
